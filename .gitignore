@@ -1,0 +1,7 @@
+node_modules/
+jspm_packages/
+# TypeScript v1 declaration files
+*.tgz
+
+# Yarn Integrity file
+.next
