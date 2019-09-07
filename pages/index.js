@@ -5,12 +5,11 @@ import Head from "next/head";
 import "../static/css/material-kit.css";
 import "../static/css/bootstrap.css";
 import "../static/css/fresh-bootstrap-table.css";
+import Graph from "../components/Graph";
 
 const Index = props => {
-  const metaDate = props.data["Meta Data"];
+  const metaData = props.data["Meta Data"];
   const timeSeriesData = props.data["Time Series (Daily)"];
-
-  console.log(metaDate);
   return (
     <div>
       <Head>
@@ -36,14 +35,14 @@ const Index = props => {
           <p>Hi!</p>
         </div>
         <div className="container text-center">
-          <div className="col-md-8 col-md-offset-2">
+          <div className="col-md-offset-2">
             <div
               className="fresh-table toolbar-color-azure"
               style={{ display: "block" }}
             >
               <div className="boostrape-table">
                 <div className="fixed-table-toolbar">
-                  <h6>{metaDate["2. Symbol"]}</h6>
+                  <h6>{metaData["2. Symbol"]}</h6>
                 </div>
                 <div className="fixed-table-container">
                   <div className="fixed-table-body">
@@ -69,6 +68,7 @@ const Index = props => {
             </div>
           </div>
         </div>
+        <Graph timeSeriesData={timeSeriesData} />
       </div>
     </div>
   );
