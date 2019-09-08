@@ -3,8 +3,7 @@ import axios from "axios";
 
 import Head from "next/head";
 import "../static/css/material-kit.css";
-import "../static/css/bootstrap.css";
-import "../static/css/fresh-bootstrap-table.css";
+import "../static/css/style.css";
 import Graph from "../components/Graph";
 
 const Index = props => {
@@ -34,41 +33,7 @@ const Index = props => {
         <div className="section section-basic text-center">
           <p>Hi!</p>
         </div>
-        <div className="container text-center">
-          <div className="col-md-offset-2">
-            <div
-              className="fresh-table toolbar-color-azure"
-              style={{ display: "block" }}
-            >
-              <div className="boostrape-table">
-                <div className="fixed-table-toolbar">
-                  <h6>{metaData["2. Symbol"]}</h6>
-                </div>
-                <div className="fixed-table-container">
-                  <div className="fixed-table-body">
-                    <table className="table table-hover table-striped">
-                      <thead>
-                        <tr>
-                          <th className="text-center">Date</th>
-                          <th className="text-center">Close Price</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {Object.keys(timeSeriesData).map((i, index) => (
-                          <tr key={index}>
-                            <td>{i}</td>
-                            <td>{timeSeriesData[i]["4. close"]}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Graph timeSeriesData={timeSeriesData} />
+        <Graph timeSeriesData={timeSeriesData} metaData={metaData} />
       </div>
     </div>
   );
