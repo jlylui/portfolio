@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Link from "next/link";
 import axios from "axios";
 
-import Head from "next/head";
 import "../static/css/material-kit.css";
 import "../static/css/style.css";
+import Layout from "../components/Layout";
 import Form from "../components/Form";
 import GraphCard from "../components/GraphCard";
 
@@ -21,36 +20,7 @@ const Index = props => {
   };
 
   return (
-    <div>
-      <Head>
-        <title>Joycelyn Lui</title>
-      </Head>
-      <nav className="navbar fixed-top navbar-expand-lg">
-        <div className="container">
-          <div className="navbar-translate">
-            <a className="navbar-brand">Joycelyn Lui</a>
-          </div>
-          <button className="navbar-toggler" type="button"></button>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link href="#">
-                  <a href="#" className="nav-link">
-                    About
-                  </a>
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="#asxSearch">
-                  <a href="#asxSearch" className="nav-link">
-                    ASX Search
-                  </a>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <Layout>
       <div className="page-header header-filter"></div>
       <div className="main">
         <div className="section section-basic text-center" id="asxSearch">
@@ -67,17 +37,17 @@ const Index = props => {
         <div className="section section-basic">
           <div className="container">
             <h4>Speakers</h4>
-            <ul>
+            {/* <ul>
               {props.speakerData.map(speaker => (
                 <li key={speaker.id}>
                   {speaker.firstName} {speaker.lastName}
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

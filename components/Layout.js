@@ -1,8 +1,10 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faUsers } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+import Head from "next/head";
+import NavBar from "./NavBar";
 
-library.add(fab, faHome, faUsers);
+library.add(fab, faHome, faUser);
 
 const navMenu = [
   {
@@ -14,12 +16,12 @@ const navMenu = [
   },
   {
     label: "About",
-    link: "/about",
-    icon: "users"
+    link: "/#about",
+    icon: "user"
   },
   {
     label: "Projects",
-    link: "/projects",
+    link: "/#asxSearch",
     icon: ""
   },
   {
@@ -43,3 +45,17 @@ const socialMedia = [
     link: ""
   }
 ];
+
+const Layout = props => {
+  return (
+    <div>
+      <Head>
+        <title>Joycelyn Lui</title>
+      </Head>
+      <NavBar navMenu={navMenu} />
+      <div className="main">{props.children}</div>
+    </div>
+  );
+};
+
+export default Layout;
