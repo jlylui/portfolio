@@ -1,14 +1,25 @@
 import React, { useState } from "react";
+import Link from "next/link";
 import axios from "axios";
 
 import Head from "next/head";
 import "../static/css/material-kit.css";
 import "../static/css/style.css";
-import Graph from "../components/Graph";
+import Form from "../components/Form";
+import GraphCard from "../components/GraphCard";
 
 const Index = props => {
-  const metaData = props.data["Meta Data"];
-  const timeSeriesData = props.data["Time Series (Daily)"];
+  console.log("rendering index");
+  const [response, setResponse] = useState(null);
+
+  const handleResponse = respData => {
+    if (respData.httpRequestErrored) {
+      console.log(respData.message);
+    } else {
+      setResponse(respData);
+    }
+  };
+
   return (
     <div>
       <Head>
@@ -19,10 +30,22 @@ const Index = props => {
           <div className="navbar-translate">
             <a className="navbar-brand">Joycelyn Lui</a>
           </div>
+          <button className="navbar-toggler" type="button"></button>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link">About</a>
+                <Link href="#">
+                  <a href="#" className="nav-link">
+                    About
+                  </a>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link href="#asxSearch">
+                  <a href="#asxSearch" className="nav-link">
+                    ASX Search
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -30,29 +53,41 @@ const Index = props => {
       </nav>
       <div className="page-header header-filter"></div>
       <div className="main">
-        <div className="section section-basic text-center">
+        <div className="section section-basic text-center" id="asxSearch">
           <p>Hi!</p>
+          <Form onSubmit={handleResponse} />
+          {response && response.data["Meta Data"] ? (
+            <GraphCard
+              timeSeriesData={response.data["Time Series (Daily)"]}
+              metaData={response.data["Meta Data"]}
+            />
+          ) : null}
         </div>
-        <Graph timeSeriesData={timeSeriesData} metaData={metaData} />
+
+        <div className="section section-basic">
+          <div className="container">
+            <h4>Speakers</h4>
+            <ul>
+              {props.speakerData.map(speaker => (
+                <li key={speaker.id}>
+                  {speaker.firstName} {speaker.lastName}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 Index.getInitialProps = async () => {
-  const params = {
-    function: "TIME_SERIES_DAILY",
-    symbol: "ASX:BVS",
-    apikey: "H8HG5KWNVPK38JDU"
-  };
-
-  var promise = axios
-    .get("https://www.alphavantage.co/query", { params })
-    // .get("http://localhost:4000/speakers")
+  let promise = axios
+    .get("http://localhost:4000/speakers")
     .then(response => {
       return {
         hasErrored: false,
-        data: response.data
+        speakerData: response.data
       };
     })
     .catch(error => {

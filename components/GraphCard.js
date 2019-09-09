@@ -1,5 +1,6 @@
 import "../node_modules/react-vis/dist/style.css";
-// import "../static/css/argon-dashboard.css";
+import window from "global";
+
 import React, { useState, useEffect } from "react";
 import {
   Crosshair,
@@ -7,12 +8,12 @@ import {
   LineSeries,
   XAxis,
   YAxis,
-  HorizontalGridLines,
-  VerticalGridLines
+  HorizontalGridLines
 } from "react-vis";
 
-const Graph = props => {
+const GraphCard = props => {
   const [smMdWindow, setSmMdWindow] = useState(false);
+  const [point, setPoint] = useState([]);
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -27,6 +28,7 @@ const Graph = props => {
       window.removeEventListener("resize", handleWindowResize);
     };
   });
+
   const plotData = Object.keys(props.timeSeriesData)
     .reverse()
     .map(i => ({
@@ -35,16 +37,11 @@ const Graph = props => {
     }))
     .filter(item => item.y > 0);
 
-  const [point, setPoint] = useState([]);
-
   let xlabel = plotData
     .filter(
       (_, i) => (i + 1) % (smMdWindow || window.innerWidth < 1024 ? 45 : 8) == 0
     )
     .map(item => item.x);
-  window.innerWidth >= 1024
-    ? xlabel.unshift(plotData[0].x)
-    : xlabel.unshift(plotData[7].x);
 
   return (
     <div className="container text-center">
@@ -107,4 +104,4 @@ const Graph = props => {
   );
 };
 
-export default Graph;
+export default GraphCard;
