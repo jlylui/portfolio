@@ -39,7 +39,8 @@ const GraphCard = props => {
 
   let xlabel = plotData
     .filter(
-      (_, i) => (i + 1) % (smMdWindow || window.innerWidth < 1024 ? 45 : 8) == 0
+      (_, i) =>
+        (i + 1) % (smMdWindow || window.innerWidth < 1024 ? 45 : 15) == 0
     )
     .map(item => item.x);
 

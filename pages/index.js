@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import "../static/css/material-kit.css";
-import "../static/css/style.css";
 import Layout from "../components/Layout";
 import Form from "../components/Form";
 import GraphCard from "../components/GraphCard";
@@ -21,29 +19,53 @@ const Index = props => {
 
   return (
     <Layout>
-      <div className="page-header header-filter"></div>
-      <div className="main">
-        <div className="section section-basic text-center" id="asxSearch">
-          <p>Hi!</p>
-          <Form onSubmit={handleResponse} />
-          {response && response.data["Meta Data"] ? (
-            <GraphCard
-              timeSeriesData={response.data["Time Series (Daily)"]}
-              metaData={response.data["Meta Data"]}
-            />
-          ) : null}
-        </div>
-
-        <div className="section section-basic">
-          <div className="container">
-            <h4>Speakers</h4>
-            {/* <ul>
+      <div
+        className="page-header header-filter"
+        style={{ backgroundImage: `url("../static/img/header-01.jpg")` }}
+      ></div>
+      <div className="main main-raised">
+        <div className="container">
+          <div className="row">
+            {/* ABOUT SECTION =========================================================*/}
+            <div className="col-sm-4 text-center">
+              <img
+                src="../static/img/me.jpg"
+                alt=""
+                className="img-raised rounded-circle img-fluid profile-img"
+              />
+              <h2 className="profile-title title">Joycelyn Lui</h2>
+              <p>joycelyn.lui@hotmail.com</p>
+            </div>
+            <div className="col-sm-8">
+              {/* PRJECT SECTION =========================================================*/}
+              <h3 id="projects" className="title">
+                Projects
+              </h3>
+              <div className="section">
+                <h4>Investment Project</h4>
+                <Form onSubmit={handleResponse} />
+                {response && response.data["Meta Data"] ? (
+                  <GraphCard
+                    timeSeriesData={response.data["Time Series (Daily)"]}
+                    metaData={response.data["Meta Data"]}
+                  />
+                ) : null}
+              </div>
+              {/* TIMELINE SECTION =========================================================*/}
+              <h3 id="timeline" className="title">
+                Timeline
+              </h3>
+              <div className="section">
+                <h4>Speakers</h4>
+                {/* <ul>
               {props.speakerData.map(speaker => (
                 <li key={speaker.id}>
                   {speaker.firstName} {speaker.lastName}
                 </li>
               ))}
             </ul> */}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -24,9 +24,38 @@
   margin: 0 !important;
 }
 
+.page-header {
+  height: 400px;
+}
+
+.section {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.profile-img {
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+  transform: translate3d(0, -20%, 0);
+}
+
+.profile-title {
+  margin-block-start: 0 !important;
+  font-family: "Open Sans", serif;
+  /* text-transform: uppercase; */
+}
+
+@media all and (max-width: 991px) {
+  .navbar-collapse {
+    visibility: hidden;
+    right: -230px !important;
+  }
+}
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 425px) {
 }
+
 @media (min-width: 576px) {
 }
 /* Medium devices (tablets, 768px and up) */
