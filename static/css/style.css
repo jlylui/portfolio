@@ -37,7 +37,7 @@
   max-width: 200px;
   width: 100%;
   margin: 0 auto;
-  transform: translate3d(0, -20%, 0);
+  transform: translate3d(0, -25%, 0);
 }
 
 .profile-title {
@@ -46,14 +46,31 @@
   /* text-transform: uppercase; */
 }
 
+.nav-li:hover {
+  text-decoration: underline;
+}
+
 @media all and (max-width: 991px) {
   .navbar-collapse {
     visibility: hidden;
     right: -230px !important;
   }
+  .nav-ul {
+    display: table;
+    width: 100%;
+    justify-content: center;
+  }
+  .nav-li {
+    display: table-cell;
+    text-align: center;
+    flex-grow: 1;
+  }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 425px) {
+  .nav-item .nav-link {
+    font-size: 15px !important;
+  }
 }
 
 @media (min-width: 576px) {

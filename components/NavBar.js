@@ -38,16 +38,16 @@ const NavBar = props => {
   };
 
   useEffect(() => {
-    const scrollHeight = 150;
+    const scroll_height = 200;
     const updateNavbarColor = () => {
       if (
-        document.documentElement.scrollTop > scrollHeight ||
-        document.body.scrollTop > scrollHeight
+        document.documentElement.scrollTop > scroll_height ||
+        document.body.scrollTop > scroll_height
       ) {
         setNavbarColor("");
       } else if (
-        document.documentElement.scrollTop < scrollHeight ||
-        document.body.scrollTop < scrollHeight
+        document.documentElement.scrollTop < scroll_height ||
+        document.body.scrollTop < scroll_height
       ) {
         setNavbarColor("navbar-transparent");
       }
@@ -60,9 +60,9 @@ const NavBar = props => {
 
   const navMenu = (
     <div className={navClassName}>
-      <ul className="navbar-nav ml-auto">
+      <ul className="navbar-nav ml-auto nav-ul">
         {props.navMenu.map((menu, index) => (
-          <li className="nav-item" key={index}>
+          <li className="nav-item nav-li" key={index}>
             <Link href={menu.link}>
               <a href={menu.link} className="nav-link" onClick={handleNav}>
                 {menu.icon != "" ? (
@@ -90,7 +90,7 @@ const NavBar = props => {
               src={`../${props.navMenu[0].logo}`}
               alt=""
               width="30"
-              scrollHeight="30"
+              scroll_height="30"
             />{" "}
             {props.navMenu[0].brand}
           </a>

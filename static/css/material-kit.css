@@ -14,7 +14,7 @@
  */
 
 /*     brand Colors              */
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans&display=swap');
 .carousel.carousel-full-nagivation .left {
   /* cursor: url("../../img/arrow-left.png"), url("../../img/arrow-left.cur"), default !important; */
 }

@@ -34,7 +34,7 @@ const Form = props => {
     <div className="container text-center" id="asxSearch">
       <form onSubmit={handleSubmit}>
         <div className="row">
-          <div className="col-lg-6 col-sm-4">
+          <div className="col-sm-8">
             <div className={`form-group bmd-form-group ${inputFocused}`}>
               <label className="bmd-label-static">Share Code</label>
               <input
@@ -50,7 +50,7 @@ const Form = props => {
               />
             </div>
           </div>
-          <div className="col-lg-6 col-sm-4 text-left">
+          <div className="col-sm-4 text-left">
             <div className="form-group bmd-form-group">
               <button className="btn btn-primary btn-raised inline-btn">
                 Search
