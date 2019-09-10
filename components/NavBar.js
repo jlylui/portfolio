@@ -65,8 +65,8 @@ const NavBar = props => {
             <Link href={menu.link}>
               <a href={menu.link} className="nav-link" onClick={handleNav}>
                 {menu.icon != "" ? (
-                  <span>
-                    <FontAwesomeIcon icon={menu.icon} size="xs" />{" "}
+                  <span className="nav-icon">
+                    <FontAwesomeIcon icon={menu.icon} size="xs" fixedWidth />{" "}
                   </span>
                 ) : null}
                 {menu.label}

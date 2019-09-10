@@ -71,6 +71,9 @@
   .nav-item .nav-link {
     font-size: 15px !important;
   }
+  .nav-icon {
+    /* height: 20px !important; */
+  }
 }
 
 @media (min-width: 576px) {
