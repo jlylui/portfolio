@@ -58,6 +58,11 @@ const Layout = props => {
     <div>
       <Head>
         <title>Joycelyn Lui</title>
+        <link
+          rel="shortcut icon"
+          type="image/x-icon"
+          href="../static/img/jl-icon-19144-light-square.ico"
+        />
       </Head>
       <NavBar navMenu={navMenu} />
       {props.children}

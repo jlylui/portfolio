@@ -7,7 +7,6 @@ const NavBar = props => {
   const [navbarColor, setNavbarColor] = useState("navbar-transparent");
   const navRef = useRef(null);
 
-  console.log(navbarColor);
   const handleNav = () => {
     if (navClassName !== "") {
       // opened navbar
@@ -67,7 +66,7 @@ const NavBar = props => {
               <a href={menu.link} className="nav-link" onClick={handleNav}>
                 {menu.icon != "" ? (
                   <span>
-                    <FontAwesomeIcon icon={menu.icon} />{" "}
+                    <FontAwesomeIcon icon={menu.icon} size="xs" />{" "}
                   </span>
                 ) : null}
                 {menu.label}

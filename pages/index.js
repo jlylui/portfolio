@@ -21,7 +21,7 @@ const Index = props => {
     <Layout>
       <div
         className="page-header header-filter"
-        style={{ backgroundImage: `url("../static/img/header-01.jpg")` }}
+        style={{ backgroundImage: `url("../static/img/header-02.jpg")` }}
       ></div>
       <div className="main main-raised">
         <div className="container">
