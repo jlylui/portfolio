@@ -10,12 +10,14 @@ export default class About extends Component {
           alt=""
           className="img-raised rounded-circle img-fluid profile-img"
         />
-        <h2 className="profile-title title">Joycelyn Lui</h2>
-        <h6>Passion driven | Focused | Team Player</h6>
-        <p>
-          <FontAwesomeIcon icon={["far", "envelope"]} />{" "}
-          joycelyn.lui@hotmail.com
-        </p>
+        <div className="profile-name">
+          <h2 className="profile-title title">Joycelyn Lui</h2>
+          <h6>Passion driven | Focused | Team Player</h6>
+          <p>
+            <FontAwesomeIcon icon={["far", "envelope"]} />{" "}
+            joycelyn.lui@hotmail.com
+          </p>
+        </div>
       </div>
     );
   }

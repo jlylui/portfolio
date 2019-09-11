@@ -37,7 +37,7 @@ const NavBar = props => {
   };
 
   useEffect(() => {
-    const scroll_height = 200;
+    const scroll_height = 150;
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > scroll_height ||
