@@ -1,17 +1,32 @@
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
   faHome,
   faUser,
   faCode,
-  faHistory
+  faHistory,
+  faHeart,
+  faCoffee
 } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import Head from "next/head";
 import NavBar from "./NavBar";
 import "../static/css/material-kit.css";
 import "../static/css/style.css";
 
-library.add(fab, faHome, faUser, faCode, faHistory);
+config.autoAddCss = false;
+library.add(
+  fab,
+  faHome,
+  faUser,
+  faCode,
+  faHistory,
+  faHeart,
+  faCoffee,
+  faEnvelope
+);
 
 const navMenu = [
   {
@@ -52,6 +67,7 @@ const socialMedia = [
     link: ""
   }
 ];
+const date = new Date().getFullYear();
 
 const Layout = props => {
   return (
@@ -65,7 +81,30 @@ const Layout = props => {
         />
       </Head>
       <NavBar navMenu={navMenu} />
-      {props.children}
+      <div
+        className="page-header header-filter"
+        style={{ backgroundImage: `url("/static/img/header-02.jpg")` }}
+      ></div>
+      <div className="main main-raised">{props.children}</div>
+      <footer className="footer footer-default">
+        <div className="container">
+          <nav className="float-left">
+            <ul>
+              <li>
+                <a href="https://www.joycelynlui.com/">JOYCELYN LUI</a>
+              </li>
+            </ul>
+          </nav>
+          <div className="copyright float-right">
+            &copy;{date} Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
+            <FontAwesomeIcon icon={"coffee"} /> by{" "}
+            <a href="https://www.joycelynlui.com/" target="blank">
+              Joycelyn Lui
+            </a>{" "}
+            in Sydney
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

@@ -31,7 +31,7 @@ const Form = props => {
     props.onSubmit(resp);
   };
   return (
-    <div className="container text-center" id="asxSearch">
+    <div className="" id="asxSearch">
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-sm-8">

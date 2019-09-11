@@ -65,8 +65,8 @@ const NavBar = props => {
             <Link href={menu.link}>
               <a href={menu.link} className="nav-link" onClick={handleNav}>
                 {menu.icon != "" ? (
-                  <span className="nav-icon">
-                    <FontAwesomeIcon icon={menu.icon} size="xs" fixedWidth />{" "}
+                  <span>
+                    <FontAwesomeIcon icon={menu.icon} />{" "}
                   </span>
                 ) : null}
                 {menu.label}
@@ -82,7 +82,7 @@ const NavBar = props => {
 
   return (
     <nav className={"navbar fixed-top navbar-expand-lg " + navbarColor}>
-      <div className="container" ref={navRef}>
+      <div className="container nav-container" ref={navRef}>
         <div className="navbar-translate">
           <a className="navbar-brand">
             <img

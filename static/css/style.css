@@ -1,3 +1,5 @@
+@import url("../../node_modules/@fortawesome/fontawesome-svg-core/styles.css");
+
 .rv-crosshair__inner__content {
   width: 120px;
 }
@@ -50,6 +52,14 @@
   text-decoration: underline;
 }
 
+.copyright {
+  font-size: 12px;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 @media all and (max-width: 991px) {
   .navbar-collapse {
     visibility: hidden;
@@ -57,7 +67,6 @@
   }
   .nav-ul {
     display: table;
-    width: 100%;
     justify-content: center;
   }
   .nav-li {
@@ -71,9 +80,6 @@
   .nav-item .nav-link {
     font-size: 15px !important;
   }
-  .nav-icon {
-    /* height: 20px !important; */
-  }
 }
 
 @media (min-width: 576px) {
@@ -83,6 +89,12 @@
   .card-chart {
     height: 400px !important;
     margin-left: 0px !important;
+  }
+
+  .nav-container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    max-width: 100%;
   }
 }
 

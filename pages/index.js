@@ -1,95 +1,100 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 
-import Layout from "../components/Layout";
-import Form from "../components/Form";
-import GraphCard from "../components/GraphCard";
+import About from "../components/About";
+import StockData from "../components/StockData";
+
+// Div Format Order
+{
+  /* 
+  <div className="container">
+    <h3 className="title"></h3>
+    <div className="section">
+      <h4></h4>
+      <content/>
+    </div>
+  </div>
+*/
+}
 
 const Index = props => {
   console.log("rendering index");
-  const [response, setResponse] = useState(null);
-
-  const handleResponse = respData => {
-    if (respData.httpRequestErrored) {
-      console.log(respData.message);
-    } else {
-      setResponse(respData);
-    }
-  };
 
   return (
-    <Layout>
-      <div
-        className="page-header header-filter"
-        style={{ backgroundImage: `url("../static/img/header-02.jpg")` }}
-      ></div>
-      <div className="main main-raised">
-        <div className="container">
-          <div className="row">
-            {/* ABOUT SECTION =========================================================*/}
-            <div className="col-sm-4 text-center">
-              <img
-                src="../static/img/me.jpg"
-                alt=""
-                className="img-raised rounded-circle img-fluid profile-img"
-              />
-              <h2 className="profile-title title">Joycelyn Lui</h2>
-              <p>joycelyn.lui@hotmail.com</p>
-            </div>
-            <div className="col-sm-8">
-              {/* PRJECT SECTION =========================================================*/}
-              <h3 id="projects" className="title">
-                Projects
-              </h3>
-              <div className="section">
-                <h4>Investment Project</h4>
-                <Form onSubmit={handleResponse} />
-                {response && response.data["Meta Data"] ? (
-                  <GraphCard
-                    timeSeriesData={response.data["Time Series (Daily)"]}
-                    metaData={response.data["Meta Data"]}
-                  />
-                ) : null}
-              </div>
-              {/* TIMELINE SECTION =========================================================*/}
-              <h3 id="timeline" className="title">
-                Timeline
-              </h3>
-              <div className="section">
-                <h4>Speakers</h4>
-                {/* <ul>
+    <div className="row">
+      <About />
+      <div className="col-lg-8">
+        <div id="projects" className="container">
+          {/* PRJECT SECTION =========================================================*/}
+          <h3 className="title">Projects</h3>
+          <StockData />
+        </div>
+        {/* TIMELINE SECTION =========================================================*/}
+        <div id="timeline" className="container">
+          <h3 className="title">Timeline</h3>
+          <div className="section">
+            <h4>Speakers</h4>
+            {/* <ul>
               {props.speakerData.map(speaker => (
                 <li key={speaker.id}>
                   {speaker.firstName} {speaker.lastName}
                 </li>
               ))}
             </ul> */}
-              </div>
-            </div>
+
+            <p>
+              Faucibus ornare suspendisse sed nisi lacus sed. Iaculis eu non
+              diam phasellus vestibulum lorem. At auctor urna nunc id. Ultrices
+              in iaculis nunc sed augue lacus. Ut enim blandit volutpat maecenas
+              volutpat blandit aliquam. At ultrices mi tempus imperdiet nulla.
+              Eu augue ut lectus arcu bibendum at. Condimentum lacinia quis vel
+              eros donec ac odio tempor orci. Vestibulum mattis ullamcorper
+              velit sed ullamcorper. Dis parturient montes nascetur ridiculus
+              mus mauris vitae ultricies.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh
+              tortor id aliquet lectus proin nibh nisl. Bibendum arcu vitae
+              elementum curabitur. Nulla facilisi morbi tempus iaculis urna id
+              volutpat lacus. Volutpat diam ut venenatis tellus in metus.
+              Euismod elementum nisi quis eleifend quam. Cursus metus aliquam
+              eleifend mi in nulla posuere sollicitudin. Amet dictum sit amet
+              justo donec enim diam vulputate ut. Egestas maecenas pharetra
+              convallis posuere morbi leo. Mollis nunc sed id semper risus in
+              hendrerit. Quis risus sed vulputate odio ut enim. Velit laoreet id
+              donec ultrices. Interdum varius sit amet mattis vulputate. Netus
+              et malesuada fames ac turpis egestas maecenas. Pellentesque eu
+              tincidunt tortor aliquam nulla. Nibh tellus molestie nunc non
+              blandit. Risus in hendrerit gravida rutrum quisque non tellus orci
+              ac. Ornare aenean euismod elementum nisi quis eleifend quam
+              adipiscing vitae. Sit amet facilisis magna etiam tempor orci eu
+              lobortis elementum. Viverra mauris in aliquam sem.
+            </p>
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
-Index.getInitialProps = async () => {
-  let promise = axios
-    .get("http://localhost:4000/speakers")
-    .then(response => {
-      return {
-        hasErrored: false,
-        speakerData: response.data
-      };
-    })
-    .catch(error => {
-      return {
-        hasErrored: true,
-        message: error.message
-      };
-    });
+// Index.getInitialProps = async () => {
+//   let promise = axios
+//     .get("http://localhost:4000/speakers")
+//     .then(response => {
+//       return {
+//         hasErrored: false,
+//         speakerData: response.data
+//       };
+//     })
+//     .catch(error => {
+//       return {
+//         hasErrored: true,
+//         message: error.message
+//       };
+//     });
 
-  return promise;
-};
+//   return promise;
+// };
 
 export default Index;
