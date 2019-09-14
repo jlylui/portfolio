@@ -44,6 +44,7 @@
 
 .profile-name {
   margin-top: -80px;
+  margin-bottom: 20px;
 }
 .profile-title {
   margin-block-start: 0 !important;
@@ -63,6 +64,19 @@
   padding-right: 20px;
 }
 
+.btn.btn-fab,
+.btn.btn-just-icon {
+  font-size: 15px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 36px;
+}
+
+footer ul li a {
+  font-size: 10px !important;
+}
+
 @media all and (max-width: 991px) {
   .navbar-collapse {
     visibility: hidden;
@@ -79,9 +93,17 @@
   }
 }
 /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) {
+  footer ul li a {
+    font-size: 12px !important;
+  }
+}
 @media (min-width: 425px) {
   .nav-item .nav-link {
     font-size: 15px !important;
+  }
+  footer ul li a {
+    font-size: 12px !important;
   }
 }
 

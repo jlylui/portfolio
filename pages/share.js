@@ -6,15 +6,17 @@ const Share = props => {
   const shareSymbol = props.data["Meta Data"]["Symbol"];
 
   return (
-    <div className="row">
-      <div className="container">
-        <h3 className="title">Share</h3>
-        <div className="section">
-          <h4>{shareSymbol}</h4>
-          <GraphCard
-            timeSeriesData={props.data["Time Series (Daily)"]}
-            metaData={props.data["Meta Data"]}
-          />
+    <div className="container">
+      <div className="row">
+        <div className="container">
+          <h3 className="title">Share</h3>
+          <div className="section">
+            <h4>{shareSymbol}</h4>
+            <GraphCard
+              timeSeriesData={props.data["Time Series (Daily)"]}
+              metaData={props.data["Meta Data"]}
+            />
+          </div>
         </div>
       </div>
     </div>

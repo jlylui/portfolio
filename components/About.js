@@ -1,10 +1,25 @@
 import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const socialMedia = [
+  {
+    icon: ["fab", "github"],
+    link: "https://www.github.com/jlylui"
+  },
+  {
+    icon: ["fab", "linkedin"],
+    link: "https://www.linkedin.com/in/joycelyn-lui-44302585"
+  },
+  {
+    icon: ["fab", "pinterest"],
+    link: "https://www.pinterest.co.uk/heyjoycelyn/"
+  }
+];
+
 export default class About extends Component {
   render() {
     return (
-      <div className="col-lg-4 text-center">
+      <div className="col-lg-4 text-center" id="about">
         <img
           src="/static/img/me.jpg"
           alt=""
@@ -15,7 +30,20 @@ export default class About extends Component {
           <h6>Passion driven | Focused | Team Player</h6>
           <p>
             <FontAwesomeIcon icon={["far", "envelope"]} />{" "}
-            joycelyn.lui@hotmail.com
+            <a href="mailto:joycelyn.lui@hotmail.com">
+              joycelyn.lui@hotmail.com
+            </a>
+          </p>
+        </div>
+        <div className="row justify-content-center">
+          <p>
+            {socialMedia.map(media => (
+              <a href={media.link} target="_blank">
+                <button className="btn btn-social btn-link">
+                  <FontAwesomeIcon icon={media.icon} size="2x" />
+                </button>
+              </a>
+            ))}
           </p>
         </div>
       </div>

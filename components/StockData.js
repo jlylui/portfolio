@@ -31,11 +31,38 @@ const StockData = () => {
         </Link>
       </div>
       <Form onSubmit={handleResponse} />
-      {response && response.data["Meta Data"] ? (
-        <GraphCard
-          timeSeriesData={response.data["Time Series (Daily)"]}
-          metaData={response.data["Meta Data"]}
-        />
+      {response ? (
+        response.data["bestMatches"] &&
+        response.data["bestMatches"].length > 0 ? (
+          <ul>
+            {response.data["bestMatches"]
+              .filter(match =>
+                response.inputRegion !== ""
+                  ? match["4. region"] === response.inputRegion
+                  : match
+              )
+              .map((result, index) => (
+                <li key={index}>
+                  <Link
+                    href={{
+                      pathname: "/share",
+                      query: {
+                        shareCode: result["1. symbol"]
+                      }
+                    }}
+                    as={`share/${result["1. symbol"]}`}
+                  >
+                    <a>
+                      {result["1. symbol"]} ({result["2. name"]}{" "}
+                      {response.inputRegion !== "" ? "" : result["4. region"]})
+                    </a>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        ) : (
+          <p>No match found</p>
+        )
       ) : null}
     </div>
   );
