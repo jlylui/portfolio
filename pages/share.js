@@ -6,9 +6,9 @@ const Share = props => {
   const shareSymbol = props.data["Meta Data"]["Symbol"];
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="container">
+    <div className="row">
+      <div className="page-container">
+        <div className="container ">
           <h3 className="title">Share</h3>
           <div className="section">
             <h4>{shareSymbol}</h4>
@@ -33,7 +33,6 @@ Share.getInitialProps = async ({ query }) => {
   let promise = axios
     .get("https://www.alphavantage.co/query", { params })
     .then(response => {
-      console.log("Response: ", response);
       return {
         httpRequestErrored: false,
         status: response.status,

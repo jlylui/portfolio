@@ -4,17 +4,19 @@ import axios from "axios";
 import About from "../components/About";
 import StockData from "../components/StockData";
 
-// Div Format Order
+// Div Format for single column page
 {
-  /* 
-  <div className="container">
-    <h3 className="title"></h3>
-    <div className="section">
-      <h4></h4>
-      <content/>
+  /* <div className="row">
+  <div className="page-container">
+    <div className="container ">
+      <h3 className="title">Share</h3>
+      <div className="section">
+        <h4></h4>
+        <content/>
+      </div>
     </div>
   </div>
-*/
+</div>       */
 }
 
 const Index = props => {
@@ -33,15 +35,7 @@ const Index = props => {
         <div id="timeline" className="container">
           <h3 className="title">Timeline</h3>
           <div className="section">
-            <h4>Speakers</h4>
-            {/* <ul>
-              {props.speakerData.map(speaker => (
-                <li key={speaker.id}>
-                  {speaker.firstName} {speaker.lastName}
-                </li>
-              ))}
-            </ul> */}
-
+            <h4>Highlights</h4>
             <p>
               Faucibus ornare suspendisse sed nisi lacus sed. Iaculis eu non
               diam phasellus vestibulum lorem. At auctor urna nunc id. Ultrices
@@ -77,24 +71,5 @@ const Index = props => {
     </div>
   );
 };
-
-// Index.getInitialProps = async () => {
-//   let promise = axios
-//     .get("http://localhost:4000/speakers")
-//     .then(response => {
-//       return {
-//         hasErrored: false,
-//         speakerData: response.data
-//       };
-//     })
-//     .catch(error => {
-//       return {
-//         hasErrored: true,
-//         message: error.message
-//       };
-//     });
-
-//   return promise;
-// };
 
 export default Index;

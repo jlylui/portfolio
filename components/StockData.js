@@ -25,7 +25,7 @@ const StockData = () => {
               shareCode: "APX.AUS"
             }
           }}
-          as={`share/APX`}
+          as={`share/APX.AUS`}
         >
           <a className="btn btn-primary btn-raised inline-btn">APX</a>
         </Link>

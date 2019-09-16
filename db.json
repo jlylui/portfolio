@@ -1,4 +1,138 @@
 {
+ "investment": [
+    {
+      "code": "TLS",
+      "Purchase Date": "9/01/2018",
+      "Unit": 6400,
+      "Purchase cost": "$21,114.54",
+      "Purchase Value": "$3.30",
+      "Current Prices": "3.57",
+      "Dividend Earn Yearly": "$1,024.00",
+      "Profit": "$1,733.46",
+      "% investment": 23.29223595
+    },
+    {
+      "code": "ANZ",
+      "Purchase Date": "17/01/2018",
+      "Unit": 246,
+      "Purchase cost": "$6,929.90",
+      "Purchase Value": "$28.17",
+      "Current Prices": "27.6",
+      "Dividend Earn Yearly": "$393.60",
+      "Profit": "-$140.30",
+      "% investment": 7.644630948
+    },
+    {
+      "code": "NAB",
+      "Purchase Date": "25/01/2018",
+      "Unit": 278,
+      "Purchase cost": "$7,899.30",
+      "Purchase Value": "$28.42",
+      "Current Prices": "29.13",
+      "Dividend Earn Yearly": "$550.44",
+      "Profit": "$198.84",
+      "% investment": 8.714012215
+    },
+    {
+      "code": "WBC",
+      "Purchase Date": "9/02/2018",
+      "Unit": 165,
+      "Purchase cost": "$4,851.06",
+      "Purchase Value": "$29.40",
+      "Current Prices": "$29.54",
+      "Dividend Earn Yearly": "$310.20",
+      "Profit": "$23.04",
+      "% investment": 5.351385072
+    },
+    {
+      "code": "APX",
+      "Purchase Date": "16/03/2018",
+      "Unit": 500,
+      "Purchase cost": "$4,977.45",
+      "Purchase Value": "$9.96",
+      "Current Prices": "$21.00",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "$5,522.55",
+      "% investment": 5.490810591
+    },
+    {
+      "code": "NEA ",
+      "Purchase Date": "14/08/2018",
+      "Unit": 2500,
+      "Purchase cost": "$3,457.45",
+      "Purchase Value": "$1.38",
+      "Current Prices": "$2.56",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "$2,942.55",
+      "% investment": 3.814041945
+    },
+    {
+      "code": "NXT",
+      "Purchase Date": "28/08/2018",
+      "Unit": 1075,
+      "Purchase cost": "$7,520.15",
+      "Purchase Value": "$7.00",
+      "Current Prices": "$6.16",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "-$898.15",
+      "% investment": 8.29575772
+    },
+    {
+      "code": "ELO",
+      "Purchase Date": "28/08/2018",
+      "Unit": 1430,
+      "Purchase cost": "$9,503.30",
+      "Purchase Value": "$6.65",
+      "Current Prices": "$6.65",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "$6.20",
+      "% investment": 10.48344439
+    },
+    {
+      "code": "ALU",
+      "Purchase Date": "1/03/2019",
+      "Unit": 280,
+      "Purchase cost": "$8,797.60",
+      "Purchase Value": "$31.42",
+      "Current Prices": "$34.13",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "$758.80",
+      "% investment": 9.704960422
+    },
+    {
+      "code": "BVS",
+      "Purchase Date": "4/07/2019",
+      "Unit": 1100,
+      "Purchase cost": "$5,079.95",
+      "Purchase Value": "$4.62",
+      "Current Prices": "$4.31",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "-$338.95",
+      "% investment": 5.603882161
+    },
+    {
+      "code": "PAR",
+      "Purchase Date": "15/07/2019",
+      "Unit": 4600,
+      "Purchase cost": "$7,359.90",
+      "Purchase Value": "$1.60",
+      "Current Prices": "$2.13",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "$2,438.10",
+      "% investment": 8.118979973
+    },
+    {
+      "code": "VHT",
+      "Purchase Date": "24/07/2019",
+      "Unit": 2000,
+      "Purchase cost": "$3,159.95",
+      "Purchase Value": "$1.58",
+      "Current Prices": "$1.58",
+      "Dividend Earn Yearly": "$0.00",
+      "Profit": "-$9.95",
+      "% investment": 3.485858608
+    }
+   ],
   "speakers": [
     {
       "id": 1530,

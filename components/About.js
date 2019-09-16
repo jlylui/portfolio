@@ -37,8 +37,8 @@ export default class About extends Component {
         </div>
         <div className="row justify-content-center">
           <p>
-            {socialMedia.map(media => (
-              <a href={media.link} target="_blank">
+            {socialMedia.map((media, index) => (
+              <a href={media.link} target="_blank" key={index}>
                 <button className="btn btn-social btn-link">
                   <FontAwesomeIcon icon={media.icon} size="2x" />
                 </button>
