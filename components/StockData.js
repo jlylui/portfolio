@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Form from "./Form";
-import GraphCard from "./GraphCard";
 import Link from "next/link";
 
 const StockData = () => {
@@ -20,12 +19,12 @@ const StockData = () => {
       <div style={{ padding: "10px 0" }}>
         <Link
           href={{
-            pathname: "/share",
+            pathname: "/shares",
             query: {
               shareCode: "APX.AUS"
             }
           }}
-          as={`share/APX.AUS`}
+          as={`shares/APX.AUS`}
         >
           <a className="btn btn-primary btn-raised inline-btn">APX</a>
         </Link>
@@ -45,12 +44,12 @@ const StockData = () => {
                 <li key={index}>
                   <Link
                     href={{
-                      pathname: "/share",
+                      pathname: "/shares",
                       query: {
                         shareCode: result["1. symbol"]
                       }
                     }}
-                    as={`share/${result["1. symbol"]}`}
+                    as={`shares/${result["1. symbol"]}`}
                   >
                     <a>
                       {result["1. symbol"]} ({result["2. name"]}{" "}

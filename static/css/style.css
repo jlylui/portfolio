@@ -125,9 +125,19 @@ footer ul li a {
   }
 
   .nav-container {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
     max-width: 100%;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .page-container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 

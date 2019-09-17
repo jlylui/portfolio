@@ -9,8 +9,8 @@ app
   .then(() => {
     const server = express();
 
-    server.get("/share/:shareCode", (req, res) => {
-      app.render(req, res, "/share", { shareCode: req.params.shareCode });
+    server.get("/shares/:shareCode", (req, res) => {
+      app.render(req, res, "/shares", { shareCode: req.params.shareCode });
     });
 
     server.get("*", (req, res) => {

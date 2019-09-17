@@ -46,7 +46,7 @@ const GraphCard = props => {
 
   return (
     <div className="text-center">
-      <h4 style={{ paddingBottom: "0" }}>{props.metaData["2. Symbol"]}</h4>
+      {/* <h4 style={{ paddingBottom: "0" }}>{props.metaData["2. Symbol"]}</h4> */}
       <div className="card card-plot">
         <div className="card-header-dark">
           <div className="nav-tabs-navigation">
