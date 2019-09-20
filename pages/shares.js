@@ -4,7 +4,6 @@ import GraphCard from "../components/GraphCard";
 
 const Shares = props => {
   console.log(props);
-  const shareSymbol = props.timeData["Meta Data"]["2. Symbol"];
 
   return (
     <div className="row">
@@ -12,53 +11,62 @@ const Shares = props => {
         <div className="container ">
           <h3 className="title">Share</h3>
           <div className="section">
-            <h4>{shareSymbol}</h4>
-            <table className="table">
-              <tbody>
-                <tr>
-                  <th data-field="price">Price</th>
-                  <td>{props.quoteRequestData["Global Quote"]["05. price"]}</td>
-                </tr>
-                <tr>
-                  <th data-field="change">Change</th>
-                  <td
-                    className={
-                      props.quoteRequestData["Global Quote"]["09. change"] > 0
-                        ? "text-success"
-                        : "text-danger"
-                    }
-                  >
-                    {props.quoteRequestData["Global Quote"]["09. change"]} (
-                    {
-                      props.quoteRequestData["Global Quote"][
-                        "10. change percent"
-                      ]
-                    }
-                    )
-                  </td>
-                </tr>
-                <tr>
-                  <th data-field="previous-close">Previous Close</th>
-                  <td>
-                    {
-                      props.quoteRequestData["Global Quote"][
-                        "08. previous close"
-                      ]
-                    }
-                  </td>
-                </tr>
-                <tr>
-                  <th data-field="volume">Volume</th>
-                  <td>
-                    {props.quoteRequestData["Global Quote"]["06. volume"]}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <GraphCard
-              timeSeriesData={props.timeData["Time Series (Daily)"]}
-              metaData={props.timeData["Meta Data"]}
-            />
+            {props.httpRequestErrored ? (
+              <div></div>
+            ) : (
+              <>
+                <h4>{props.timeData["Meta Data"]["2. Symbol"]}</h4>
+                <table className="table">
+                  <tbody>
+                    <tr>
+                      <th data-field="price">Price</th>
+                      <td>
+                        {props.quoteRequestData["Global Quote"]["05. price"]}
+                      </td>
+                    </tr>
+                    <tr>
+                      <th data-field="change">Change</th>
+                      <td
+                        className={
+                          props.quoteRequestData["Global Quote"]["09. change"] >
+                          0
+                            ? "text-success"
+                            : "text-danger"
+                        }
+                      >
+                        {props.quoteRequestData["Global Quote"]["09. change"]} (
+                        {
+                          props.quoteRequestData["Global Quote"][
+                            "10. change percent"
+                          ]
+                        }
+                        )
+                      </td>
+                    </tr>
+                    <tr>
+                      <th data-field="previous-close">Previous Close</th>
+                      <td>
+                        {
+                          props.quoteRequestData["Global Quote"][
+                            "08. previous close"
+                          ]
+                        }
+                      </td>
+                    </tr>
+                    <tr>
+                      <th data-field="volume">Volume</th>
+                      <td>
+                        {props.quoteRequestData["Global Quote"]["06. volume"]}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <GraphCard
+                  timeSeriesData={props.timeData["Time Series (Daily)"]}
+                  metaData={props.timeData["Meta Data"]}
+                />
+              </>
+            )}
           </div>
         </div>
       </div>
