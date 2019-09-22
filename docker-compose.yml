@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  node:
+    container_name: reactFontend
+    ports:
+      - "3000:3000"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next

@@ -48,9 +48,9 @@ export default class About extends Component {
         </div>
         <div className="container">
           <p>
-            Hi I'm Joycelyn. I am a software engineer with experience in web
-            development and test automation. Intrigued by cutting-edge
-            technology such as AI and human-computer interction.
+            Hi, I'm Joycelyn. I am a software engineer with experience in
+            full-stack web development, CICD and automation. Intrigued by
+            cutting-edge technology such as AI and human-computer interction.
           </p>
         </div>
       </div>

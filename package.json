@@ -21,7 +21,8 @@
     "react-vis": "^1.11.7"
   },
   "devDependencies": {
-    "json-server": "^0.15.1"
+    "json-server": "^0.15.1",
+    "webpack-dev-middleware": "^3.7.1"
   },
   "scripts": {
     "dev": "node server.js",
