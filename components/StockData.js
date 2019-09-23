@@ -30,6 +30,7 @@ const StockData = () => {
         </Link>
       </div>
       <Form onSubmit={handleResponse} />
+      {/* TODO: fix the issue if response data returned with array data but filter with region returns an empty array */}
       {response ? (
         response.data["bestMatches"] &&
         response.data["bestMatches"].length > 0 ? (

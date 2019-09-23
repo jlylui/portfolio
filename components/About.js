@@ -21,7 +21,7 @@ export default class About extends Component {
     return (
       <div className="col-lg-4 text-center" id="about">
         <img
-          src="/static/img/me.jpg"
+          src={"/static/img/me.jpg"}
           alt=""
           className="img-raised rounded-circle img-fluid profile-img"
         />
@@ -48,9 +48,10 @@ export default class About extends Component {
         </div>
         <div className="container">
           <p>
-            Hi, I'm Joycelyn. I am a software engineer with experience in
-            full-stack web development, CICD and automation. Intrigued by
-            cutting-edge technology such as AI and human-computer interction.
+            Hi, I'm Joycelyn. I am a software engineer with experiences in
+            full-stack web development, CICD and automation. I love exploring
+            new technologies and is always intrigued by cutting-edge technology
+            such as AI and human-computer interction.
           </p>
         </div>
       </div>
