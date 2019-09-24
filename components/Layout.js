@@ -10,7 +10,8 @@ import {
   faHistory,
   faHeart,
   faCoffee,
-  faSearch
+  faSearch,
+  faSpinner
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -30,7 +31,8 @@ library.add(
   faHeart,
   faCoffee,
   faEnvelope,
-  faSearch
+  faSearch,
+  faSpinner
 );
 
 const navMenu = [

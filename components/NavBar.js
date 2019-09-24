@@ -5,6 +5,8 @@ import Link from "next/link";
 const NavBar = props => {
   const [navClassName, setNavClassName] = useState("collapse navbar-collapse");
   const [navbarColor, setNavbarColor] = useState("navbar-transparent");
+  const [isLoading, setIsLoading] = useState(true);
+  // console.log(isLoading);
   const navRef = useRef(null);
 
   const handleNav = () => {
@@ -38,16 +40,19 @@ const NavBar = props => {
 
   useEffect(() => {
     const scroll_height = 150;
+    setIsLoading(false);
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > scroll_height ||
         document.body.scrollTop > scroll_height
       ) {
+        // console.log("setNavbarColor to not transparent");
         setNavbarColor("");
       } else if (
         document.documentElement.scrollTop < scroll_height ||
         document.body.scrollTop < scroll_height
       ) {
+        // console.log("setNavbarColor to transparent");
         setNavbarColor("navbar-transparent");
       }
     };
@@ -55,7 +60,7 @@ const NavBar = props => {
     return () => {
       window.removeEventListener("scroll", updateNavbarColor);
     };
-  });
+  }, [isLoading]);
 
   const navMenu = (
     <div className={navClassName}>

@@ -16,7 +16,7 @@ const Form = props => {
     const resp = await axios
       .get("https://www.alphavantage.co/query", { params })
       .then(response => {
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
         return {
           httpRequestErrored: false,
           status: response.status,

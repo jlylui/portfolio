@@ -1,18 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GraphCard from "../components/GraphCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const GetStockDataUrl = () => {
+  if (process.env.NODE_ENV === "production") {
+    return process.env.RESTFUL_STOCKDATA_PROD;
+  } else {
+    return process.env.RESTFUL_STOCKDATA_DEV;
+  }
+};
 
 const Shares = props => {
-  console.log(props);
-
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setIsLoading(props.isLoading);
+  });
   return (
     <div className="row">
       <div className="page-container">
         <div className="container ">
           <h3 className="title">Share</h3>
           <div className="section">
-            {props.httpRequestErrored ? (
-              <div></div>
+            {isLoading ? (
+              <div>
+                <p className="text-center text-info">
+                  <FontAwesomeIcon icon={"spinner"} spin size="2x" />
+                </p>
+              </div>
+            ) : props.httpRequestErrored ? (
+              <div>
+                <p>HTTP Request Error</p>
+              </div>
             ) : (
               <>
                 <h4>{props.timeData["Meta Data"]["2. Symbol"]}</h4>
@@ -74,23 +93,12 @@ const Shares = props => {
   );
 };
 
-const GetStockDataUrl = () => {
-  if (process.env.NODE_ENV === "production") {
-    return process.env.RESTFUL_STOCKDATA_PROD;
-  } else {
-    return process.env.RESTFUL_STOCKDATA_DEV;
-  }
-};
-
 Shares.getInitialProps = async ({ query }) => {
-  console.log(GetStockDataUrl());
   const commonParams = {
     symbol: query.shareCode,
     apikey: "H8HG5KWNVPK38JDU"
   };
-
-  let res = {};
-
+  let res = { isLoading: true };
   let promise = axios
     .get(GetStockDataUrl(), {
       params: {
@@ -100,6 +108,7 @@ Shares.getInitialProps = async ({ query }) => {
     })
     .then(response => {
       res = {
+        isLoading: false,
         quoteRequestErrored: false,
         quoteRequestStatus: response.status,
         quoteRequestStatusText: response.statusText,
