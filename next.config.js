@@ -6,7 +6,7 @@ const withCSS = require("@zeit/next-css");
 const optimizedImages = require("next-optimized-images");
 
 module.exports = withCSS(
-  optimizedImages({
+{
     optimizeImagesInDev: true,
     webpack: function(config) {
       config.module.rules.push({
@@ -36,5 +36,5 @@ module.exports = withCSS(
       };
       return config;
     }
-  })
+  }
 );
