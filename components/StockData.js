@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Form from "./Form";
+import Search from "./Search";
 import Link from "next/link";
 
 const StockData = () => {
@@ -24,12 +24,11 @@ const StockData = () => {
               shareCode: "APX.AUS"
             }
           }}
-          as={`shares/APX.AUS`}
-        >
+          as={`shares/APX.AUS`}>
           <a className="btn btn-primary btn-raised inline-btn">APX</a>
         </Link>
       </div>
-      <Form onSubmit={handleResponse} />
+      <Search onSubmit={handleResponse} />
       {/* TODO: fix the issue if response data returned with array data but filter with region returns an empty array */}
       {response ? (
         response.data["bestMatches"] &&
@@ -50,8 +49,7 @@ const StockData = () => {
                         shareCode: result["1. symbol"]
                       }
                     }}
-                    as={`shares/${result["1. symbol"]}`}
-                  >
+                    as={`shares/${result["1. symbol"]}`}>
                     <a>
                       {result["1. symbol"]} ({result["2. name"]}{" "}
                       {response.inputRegion !== "" ? "" : result["4. region"]})

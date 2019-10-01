@@ -1,8 +1,8 @@
 import React from "react";
-import axios from "axios";
 
 import About from "../components/About";
 import StockData from "../components/StockData";
+import Form from "../components/Form";
 
 // Div Format for single column page
 {
@@ -65,6 +65,13 @@ const Index = props => {
               adipiscing vitae. Sit amet facilisis magna etiam tempor orci eu
               lobortis elementum. Viverra mauris in aliquam sem.
             </p>
+          </div>
+        </div>
+        <div id="form" className="container">
+          {/* FORM SECTION =========================================================*/}
+          <h3 className="title">Contact Form</h3>
+          <div className="section">
+            <Form />
           </div>
         </div>
       </div>

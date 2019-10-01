@@ -3,7 +3,6 @@ require("dotenv").config();
 const path = require("path");
 const Dotenv = require("dotenv-webpack");
 const withCSS = require("@zeit/next-css");
-const optimizedImages = require("next-optimized-images");
 
 module.exports = withCSS({
   webpack: function(config) {

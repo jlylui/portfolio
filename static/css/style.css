@@ -74,7 +74,7 @@
 
 .btn.btn-fab,
 .btn.btn-just-icon {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 select.form-control:not([size]):not([multiple]) {
@@ -83,6 +83,14 @@ select.form-control:not([size]):not([multiple]) {
 
 footer ul li a {
   font-size: 10px !important;
+}
+
+.error-text {
+  float: right;
+  color: #ff3636 !important;
+  font-size: 12px;
+  line-height: 2 !important;
+  padding-right: 10px;
 }
 
 @media all and (max-width: 991px) {

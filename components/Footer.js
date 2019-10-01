@@ -11,7 +11,7 @@ const Footer = props => {
             <div className="col-auto" key={index}>
               <a href={media.link} target={media.target}>
                 <button className="btn btn-social btn-just-icon btn-round">
-                  <FontAwesomeIcon icon={media.icon} />
+                  <FontAwesomeIcon icon={media.icon} size="1x" />
                 </button>
               </a>
             </div>
