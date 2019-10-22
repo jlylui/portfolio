@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Search from "./Search";
-import Link from "next/link";
+import Link from "./Link";
 
 const StockData = () => {
   const [response, setResponse] = useState(null);
@@ -24,7 +24,8 @@ const StockData = () => {
               shareCode: "APX.AUS"
             }
           }}
-          as={`shares/APX.AUS`}>
+          as={`shares/APX.AUS`}
+        >
           <a className="btn btn-primary btn-raised inline-btn">APX</a>
         </Link>
       </div>
@@ -49,7 +50,8 @@ const StockData = () => {
                         shareCode: result["1. symbol"]
                       }
                     }}
-                    as={`shares/${result["1. symbol"]}`}>
+                    as={`shares/${result["1. symbol"]}`}
+                  >
                     <a>
                       {result["1. symbol"]} ({result["2. name"]}{" "}
                       {response.inputRegion !== "" ? "" : result["4. region"]})

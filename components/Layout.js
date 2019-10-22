@@ -50,7 +50,7 @@ const navMenu = [
   },
   {
     label: "Projects",
-    link: "/#projects",
+    link: "/project",
     icon: "code"
   },
   {

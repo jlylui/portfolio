@@ -1,0 +1,158 @@
+@import url("../../node_modules/@fortawesome/fontawesome-svg-core/styles.css");
+
+.rv-crosshair__inner__content {
+  width: 120px;
+}
+
+.card-chart {
+  padding-top: 15px;
+  padding-right: 5px;
+  height: 300px;
+  margin-left: -25px;
+}
+
+.card-plot {
+  margin-top: 0px !important;
+  border-radius: 0px !important;
+}
+
+.card-header-dark {
+  background: #3c4858;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.inline-btn {
+  margin: 0 !important;
+}
+
+.page-header {
+  height: 400px;
+}
+
+.section {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.profile-img {
+  max-width: 250px;
+  width: 70%;
+  margin: 0 auto;
+  transform: translate3d(0, -50%, 0);
+}
+
+.profile-name {
+  margin-top: -80px;
+  margin-bottom: 20px;
+}
+.profile-title {
+  margin-block-start: 0 !important;
+  font-family: "Open Sans", serif;
+  /* text-transform: uppercase; */
+}
+
+.nav-li:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  font-size: 12px;
+}
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 100%;
+}
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.btn.btn-fab,
+.btn.btn-just-icon {
+  font-size: 20px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+  height: 36px;
+}
+
+footer ul li a {
+  font-size: 10px !important;
+}
+
+.error-text {
+  float: right;
+  color: #ff3636 !important;
+  font-size: 12px;
+  line-height: 2 !important;
+  padding-right: 10px;
+}
+
+@media all and (max-width: 991px) {
+  .navbar-collapse {
+    visibility: hidden;
+    right: -230px !important;
+  }
+  .nav-ul {
+    display: table;
+    justify-content: center;
+  }
+  .nav-li {
+    display: table-cell;
+    text-align: center;
+    flex-grow: 1;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 375px) {
+  footer ul li a {
+    font-size: 12px !important;
+  }
+}
+@media (min-width: 425px) {
+  .nav-item .nav-link {
+    font-size: 15px !important;
+  }
+  footer ul li a {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 576px) {
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-chart {
+    height: 400px !important;
+    margin-left: 0px !important;
+  }
+
+  .nav-container {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    max-width: 100%;
+  }
+
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .page-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

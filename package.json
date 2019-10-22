@@ -38,6 +38,7 @@
     "dev": "nodemon -L server.js",
     "build": "next build",
     "start": "next start",
+    "export": "next export -o docs",
     "json-server": "json-server --watch db.json --port 4000 --delay 200"
   },
   "repository": {

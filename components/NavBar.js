@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import Link from "./Link";
+// import Link from "next/link";
 
 const NavBar = props => {
   const [navClassName, setNavClassName] = useState("collapse navbar-collapse");
