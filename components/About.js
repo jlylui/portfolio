@@ -15,7 +15,7 @@ const socialMedia = [
     link: "https://www.pinterest.co.uk/heyjoycelyn/"
   }
 ];
-
+const assetPrefix = process.env.ASSET_PREFIX;
 export default class About extends Component {
   render() {
     return (

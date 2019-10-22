@@ -72,7 +72,7 @@ var Footer = function Footer(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_Footer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Footer */ "./components/Footer.js");
 /* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
@@ -135,18 +135,19 @@ var socialMedia = [{
   link: "https://www.pinterest.co.uk/heyjoycelyn/",
   target: "_blank"
 }];
+var assetPrefix = process.env.ASSET_PREFIX;
 
 var Layout = function Layout(props) {
   return __jsx("div", null, __jsx(next_head__WEBPACK_IMPORTED_MODULE_6___default.a, null, __jsx("title", null, "Joycelyn Lui"), __jsx("link", {
     rel: "shortcut icon",
     type: "image/x-icon",
-    href: "../static/img/jl-icon-19144-light-square.ico"
+    href: "".concat(assetPrefix, "/static/img/jl-icon-19144-light-square.ico")
   })), __jsx(_NavBar__WEBPACK_IMPORTED_MODULE_7__["default"], {
     navMenu: navMenu
   }), __jsx("div", {
     className: "page-header header-filter",
     style: {
-      backgroundImage: "url(\"/static/img/header-02.jpg\")"
+      backgroundImage: "url(\"".concat(assetPrefix, "/static/img/header-02.jpg\")")
     }
   }), __jsx("div", {
     className: "main main-raised"
@@ -157,6 +158,7 @@ var Layout = function Layout(props) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Layout);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
