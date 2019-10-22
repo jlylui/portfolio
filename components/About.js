@@ -21,7 +21,7 @@ export default class About extends Component {
     return (
       <div className="col-lg-4 text-center" id="about">
         <img
-          src={"/static/img/me.jpg"}
+          src={`${assetPrefix}/static/img/me.jpg`}
           alt=""
           className="img-raised rounded-circle img-fluid profile-img"
         />

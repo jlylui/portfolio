@@ -82,7 +82,7 @@ const socialMedia = [
     target: "_blank"
   }
 ];
-
+const assetPrefix = process.env.ASSET_PREFIX;
 const Layout = props => {
   return (
     <div>
@@ -91,13 +91,15 @@ const Layout = props => {
         <link
           rel="shortcut icon"
           type="image/x-icon"
-          href="../static/img/jl-icon-19144-light-square.ico"
+          href={`${assetPrefix}/static/img/jl-icon-19144-light-square.ico`}
         />
       </Head>
       <NavBar navMenu={navMenu} />
       <div
         className="page-header header-filter"
-        style={{ backgroundImage: `url("/static/img/header-02.jpg")` }}
+        style={{
+          backgroundImage: `url("${assetPrefix}/static/img/header-02.jpg")`
+        }}
       ></div>
       <div className="main main-raised">{props.children}</div>
       <Footer navMenu={navMenu} socialMedia={socialMedia} />
