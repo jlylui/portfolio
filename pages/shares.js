@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const GetStockDataUrl = () => {
   if (process.env.NODE_ENV === "production") {
-    return process.env.RESTFUL_STOCKDATA_PROD;
+    return process.env.RESTURL_STOCKDATA_PROD;
   } else {
-    return process.env.RESTFUL_STOCKDATA_DEV;
+    return process.env.RESTURL_STOCKDATA_DEV;
   }
 };
 
@@ -51,8 +51,7 @@ const Shares = props => {
                           0
                             ? "text-success"
                             : "text-danger"
-                        }
-                      >
+                        }>
                         {props.quoteRequestData["Global Quote"]["09. change"]} (
                         {
                           props.quoteRequestData["Global Quote"][

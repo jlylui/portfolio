@@ -17,22 +17,26 @@ const Footer = props => {
             </div>
           ))}
         </div>
-        <nav className="float-md-left">
-          <ul className="footer-nav-menu">
-            {props.navMenu.map((link, index) => (
-              <li key={index}>
-                <a href={link.link}>{link.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <div className="copyright float-md-right">
-          &copy;{date} Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
-          <FontAwesomeIcon icon={"coffee"} /> by{" "}
-          <a href="https://www.joycelynlui.com/" target="blank">
-            Joycelyn Lui
-          </a>{" "}
-          in Sydney
+        <div className="col-6">
+          <nav className="float-md-left">
+            <ul className="footer-nav-menu">
+              {props.navMenu.map((link, index) => (
+                <li key={index}>
+                  <a href={link.link}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+        <div className="col-6">
+          <div className="copyright float-md-right">
+            &copy;{date} Made with <FontAwesomeIcon icon={"heart"} /> and{" "}
+            <FontAwesomeIcon icon={"coffee"} /> by{" "}
+            <a href="https://www.joycelynlui.com/" target="blank">
+              Joycelyn Lui
+            </a>{" "}
+            in Sydney
+          </div>
         </div>
       </div>
     </footer>

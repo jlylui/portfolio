@@ -41,7 +41,7 @@ const navMenu = [
     label: "HOME",
     link: "/",
     icon: "home",
-    logo: "../static/img/jl-icon-19144-light-square.png"
+    logo: "/static/img/jl-icon-19144-light-square.png"
   },
   {
     label: "About",
@@ -50,7 +50,7 @@ const navMenu = [
   },
   {
     label: "Projects",
-    link: "/project",
+    link: "/projects",
     icon: "code"
   },
   {
@@ -99,8 +99,7 @@ const Layout = props => {
         className="page-header header-filter"
         style={{
           backgroundImage: `url("${assetPrefix}/static/img/header-02.jpg")`
-        }}
-      ></div>
+        }}></div>
       <div className="main main-raised">{props.children}</div>
       <Footer navMenu={navMenu} socialMedia={socialMedia} />
     </div>

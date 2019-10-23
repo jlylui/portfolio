@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
@@ -36,7 +36,6 @@ var socialMedia = [{
   icon: ["fab", "pinterest"],
   link: "https://www.pinterest.co.uk/heyjoycelyn/"
 }];
-var assetPrefix = process.env.ASSET_PREFIX;
 
 var About =
 /*#__PURE__*/
@@ -56,7 +55,7 @@ function (_Component) {
         className: "col-lg-4 text-center",
         id: "about"
       }, __jsx("img", {
-        src: "".concat(assetPrefix, "/static/img/me.jpg"),
+        src: "/static/img/me.jpg",
         alt: "",
         className: "img-raised rounded-circle img-fluid profile-img"
       }), __jsx("div", {
@@ -90,7 +89,6 @@ function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -125,7 +123,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
 var saveForm = function saveForm(data) {
-  console.log(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_2___default()(data));
   var options = {
     method: "POST",
     headers: {
@@ -143,8 +140,7 @@ function () {
   var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(data) {
-    var response, _ref2, firstName, lastName, email;
-
+    var response, res, first, last, email;
     return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -154,26 +150,22 @@ function () {
 
           case 2:
             response = _context.sent;
-
-            if (!(response.status === 200)) {
-              _context.next = 12;
-              break;
-            }
-
-            _context.next = 6;
+            _context.next = 5;
             return response.json();
 
-          case 6:
-            _ref2 = _context.sent;
-            firstName = _ref2.firstName;
-            lastName = _ref2.lastName;
-            email = _ref2.email;
-            setTimeout(function () {
-              alert(email);
-            }, 400);
-            return _context.abrupt("return", "success");
+          case 5:
+            res = _context.sent;
 
-          case 12:
+            if (response.status === 200) {
+              first = res.first, last = res.last, email = res.email;
+            }
+
+            console.log(res);
+            setTimeout(function () {
+              alert(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_2___default()(res));
+            }, 400); //     throw new Error("error");
+
+          case 9:
           case "end":
             return _context.stop();
         }
@@ -187,64 +179,64 @@ function () {
 }();
 
 var formSchema = yup__WEBPACK_IMPORTED_MODULE_5__["object"]().shape({
-  firstName: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, "*invalid").max(50, "*invalid").required("*required"),
-  lastName: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, "*invalid").max(50, "*invalid").required("*required"),
+  first: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, "*invalid").max(50, "*invalid").required("*required"),
+  last: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().min(2, "*invalid").max(50, "*invalid").required("*required"),
   email: yup__WEBPACK_IMPORTED_MODULE_5__["string"]().email("*invalid email").required("*required")
 });
 
 var Form = function Form() {
   var initialValues = {
-    firstName: "",
-    lastName: "",
+    first: "",
+    last: "",
     email: ""
   };
   return __jsx(formik__WEBPACK_IMPORTED_MODULE_4__["Formik"], {
     initialValues: initialValues,
     validationSchema: formSchema,
-    onSubmit: function onSubmit(values, _ref3) {
-      var setSubmitting = _ref3.setSubmitting;
+    onSubmit: function onSubmit(values, _ref2) {
+      var setSubmitting = _ref2.setSubmitting;
       // setTimeout(() => {
       //   alert(JSON.stringify(values, null, 2));
       setSubmitting(false); // }, 400);
 
       requestSaveForm(values);
     }
-  }, function (_ref4) {
-    var values = _ref4.values,
-        errors = _ref4.errors,
-        status = _ref4.status,
-        touched = _ref4.touched,
-        handleChange = _ref4.handleChange,
-        handleSubmit = _ref4.handleSubmit,
-        isSubmitting = _ref4.isSubmitting;
+  }, function (_ref3) {
+    var values = _ref3.values,
+        errors = _ref3.errors,
+        status = _ref3.status,
+        touched = _ref3.touched,
+        handleChange = _ref3.handleChange,
+        handleSubmit = _ref3.handleSubmit,
+        isSubmitting = _ref3.isSubmitting;
     return __jsx("form", {
       onSubmit: handleSubmit
     }, __jsx("div", {
       className: "form-row"
     }, __jsx("div", {
-      className: "form-group col-md-6 ".concat(touched.firstName ? errors.firstName ? "has-danger" : "has-success" : "")
+      className: "form-group col-md-6 ".concat(touched.first ? errors.first ? "has-danger" : "has-success" : "")
     }, __jsx("label", null, "First Name", __jsx("span", {
       className: "text-danger"
-    }, " *")), errors.firstName && touched.firstName ? __jsx("span", {
+    }, " *")), errors.first && touched.first ? __jsx("span", {
       className: "error-text"
-    }, errors.firstName) : null, __jsx("input", {
+    }, errors.first) : null, __jsx("input", {
       type: "text",
       className: "form-control",
-      name: "firstName",
-      value: values.firstName,
+      name: "first",
+      value: values.first,
       onChange: handleChange // required={true}
 
     })), __jsx("div", {
-      className: "form-group col-md-6 ".concat(touched.lastName ? errors.lastName ? "has-danger" : "has-success" : "")
+      className: "form-group col-md-6 ".concat(touched.last ? errors.last ? "has-danger" : "has-success" : "")
     }, __jsx("label", null, "Last Name", __jsx("span", {
       className: "text-danger"
-    }, " *")), errors.lastName && touched.lastName ? __jsx("span", {
+    }, " *")), errors.last && touched.last ? __jsx("span", {
       className: "error-text"
-    }, errors.lastName) : null, __jsx("input", {
+    }, errors.last) : null, __jsx("input", {
       type: "text",
       className: "form-control",
-      name: "lastName",
-      value: values.lastName,
+      name: "last",
+      value: values.last,
       onChange: handleChange // required={true}
 
     }))), __jsx("div", {
@@ -274,43 +266,6 @@ var Form = function Form() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Form);
-
-/***/ }),
-
-/***/ "./components/Link.js":
-/*!****************************!*\
-  !*** ./components/Link.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
-
-
-var assetPrefix = process.env.ASSET_PREFIX;
-
-var Link = function Link(_ref) {
-  var href = _ref.href,
-      rest = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["href"]);
-
-  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    href: href,
-    as: "".concat(assetPrefix).concat(href)
-  }, rest));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Link);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js")))
 
 /***/ }),
 
@@ -474,7 +429,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search */ "./components/Search.js");
-/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Link */ "./components/Link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -499,7 +455,7 @@ var StockData = function StockData() {
     style: {
       padding: "10px 0"
     }
-  }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: {
       pathname: "/shares",
       query: {
@@ -516,7 +472,7 @@ var StockData = function StockData() {
   }).map(function (result, index) {
     return __jsx("li", {
       key: index
-    }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
       href: {
         pathname: "/shares",
         query: {
@@ -617,17 +573,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "./node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
-/*!****************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
-  \****************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js");
 
 /***/ }),
 
@@ -1008,39 +953,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
-  \********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
-/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
-
-function _extends() {
-  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
@@ -1094,74 +1006,6 @@ function _inherits(subClass, superClass) {
     }
   });
   if (superClass) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js":
-/*!************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js ***!
-  \************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutProperties; });
-/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
-/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js");
-
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(source, excluded);
-  var key, i;
-
-  if (_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default.a) {
-    var sourceSymbolKeys = _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default()(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js":
-/*!*****************************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutPropertiesLoose; });
-/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
-/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-
-  var sourceKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(source);
-
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
 }
 
 /***/ }),
@@ -6449,19 +6293,6 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/cor
 module.exports = function getOwnPropertyDescriptor(it, key) {
   return $Object.getOwnPropertyDescriptor(it, key);
 };
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/core-js/library/fn/object/get-own-property-symbols.js ***!
-  \****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ../../modules/es6.symbol */ "./node_modules/core-js/library/modules/es6.symbol.js");
-module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getOwnPropertySymbols;
 
 
 /***/ }),
@@ -24903,9 +24734,9 @@ exports.SUPPORTS_PERFORMANCE_USER_TIMING = exports.SUPPORTS_PERFORMANCE && typeo
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js!./":
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=G%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js!./":
 /*!******************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js ***!
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=G%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js ***!
   \******************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -33769,12 +33600,12 @@ var Index = function Index(props) {
 
 /***/ 4:
 /*!**********************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js ***!
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=G%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js ***!
   \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=G%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=G%3A%5Cdev%5Cportfolio%5Cpages%5Cindex.js!./");
 
 
 /***/ }),

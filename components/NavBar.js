@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "./Link";
 // import Link from "next/link";
-
+const assetPrefix = process.env.ASSET_PREFIX;
 const NavBar = props => {
   const [navClassName, setNavClassName] = useState("collapse navbar-collapse");
   const [navbarColor, setNavbarColor] = useState("navbar-transparent");
@@ -90,20 +90,21 @@ const NavBar = props => {
     <nav className={"navbar fixed-top navbar-expand-lg " + navbarColor}>
       <div className="container nav-container" ref={navRef}>
         <div className="navbar-translate">
-          <a className="navbar-brand">
-            <img
-              src={`../${props.navMenu[0].logo}`}
-              alt=""
-              width="30"
-              scroll_height="30"
-            />{" "}
-            {props.navMenu[0].brand}
-          </a>
+          <Link href={props.navMenu[0].link}>
+            <a className="navbar-brand">
+              <img
+                src={`${assetPrefix}${props.navMenu[0].logo}`}
+                alt=""
+                width="30"
+                scroll_height="30"
+              />{" "}
+              {props.navMenu[0].brand}
+            </a>
+          </Link>
           <button
             className={`navbar-toggler ${navClassName === "" ? "toggled" : ""}`}
             type="button"
-            onClick={handleNav}
-          >
+            onClick={handleNav}>
             <span className="sr-only"></span>
             <span className="navbar-toggler-icon"></span>
             <span className="navbar-toggler-icon"></span>

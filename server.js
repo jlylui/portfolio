@@ -19,17 +19,6 @@ app
     server.use(bodyParser.json());
     server.use(morgan("combined")); // use 'tiny' or 'combined'
 
-    //db Connection with localhost
-    var db = require("knex")({
-      client: "pg",
-      connection: {
-        host: "127.0.0.1",
-        user: "",
-        password: "",
-        database: ""
-      }
-    });
-
     setupApi(server);
 
     server.get("/shares/:shareCode", (req, res) => {

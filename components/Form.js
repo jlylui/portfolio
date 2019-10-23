@@ -4,7 +4,6 @@ import * as Yup from "yup";
 import fetch from "isomorphic-unfetch";
 
 const saveForm = data => {
-  console.log(JSON.stringify(data));
   const options = {
     method: "POST",
     headers: {
@@ -18,22 +17,24 @@ const saveForm = data => {
 
 const requestSaveForm = async data => {
   const response = await saveForm(data);
+  const res = await response.json();
   if (response.status === 200) {
-    const { firstName, lastName, email } = await response.json();
-    setTimeout(() => {
-      alert(email);
-    }, 400);
-    return "success";
+    const { first, last, email } = res;
   }
+  console.log(res);
+  setTimeout(() => {
+    alert(JSON.stringify(res));
+  }, 400);
+
   //     throw new Error("error");
 };
 
 const formSchema = Yup.object().shape({
-  firstName: Yup.string()
+  first: Yup.string()
     .min(2, "*invalid")
     .max(50, "*invalid")
     .required("*required"),
-  lastName: Yup.string()
+  last: Yup.string()
     .min(2, "*invalid")
     .max(50, "*invalid")
     .required("*required"),
@@ -44,8 +45,8 @@ const formSchema = Yup.object().shape({
 
 const Form = () => {
   const initialValues = {
-    firstName: "",
-    lastName: "",
+    first: "",
+    last: "",
     email: ""
   };
 
@@ -74,8 +75,8 @@ const Form = () => {
           <div className="form-row">
             <div
               className={`form-group col-md-6 ${
-                touched.firstName
-                  ? errors.firstName
+                touched.first
+                  ? errors.first
                     ? "has-danger"
                     : "has-success"
                   : ""
@@ -83,37 +84,33 @@ const Form = () => {
               <label>
                 First Name<span className="text-danger"> *</span>
               </label>
-              {errors.firstName && touched.firstName ? (
-                <span className="error-text">{errors.firstName}</span>
+              {errors.first && touched.first ? (
+                <span className="error-text">{errors.first}</span>
               ) : null}
               <input
                 type="text"
                 className="form-control"
-                name="firstName"
-                value={values.firstName}
+                name="first"
+                value={values.first}
                 onChange={handleChange}
                 // required={true}
               />
             </div>
             <div
               className={`form-group col-md-6 ${
-                touched.lastName
-                  ? errors.lastName
-                    ? "has-danger"
-                    : "has-success"
-                  : ""
+                touched.last ? (errors.last ? "has-danger" : "has-success") : ""
               }`}>
               <label>
                 Last Name<span className="text-danger"> *</span>
               </label>
-              {errors.lastName && touched.lastName ? (
-                <span className="error-text">{errors.lastName}</span>
+              {errors.last && touched.last ? (
+                <span className="error-text">{errors.last}</span>
               ) : null}
               <input
                 type="text"
                 className="form-control"
-                name="lastName"
-                value={values.lastName}
+                name="last"
+                value={values.last}
                 onChange={handleChange}
                 // required={true}
               />
