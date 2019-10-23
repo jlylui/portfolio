@@ -20,7 +20,7 @@ module.exports = withCSS({
     const asxCode = data.map(entry => entry.ASXCode);
 
     asxCode.forEach(code => {
-      paths[`/shares/${code}`] = {
+      paths[`/shares/${code}.AUS.html`] = {
         page: "/shares",
         query: { shareCode: `${code}.AUS` }
       };
