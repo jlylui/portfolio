@@ -15,16 +15,16 @@ module.exports = withCSS({
       "/": { page: "/" },
       "/projects": { page: "/projects" }
     };
-    const res = await fetch(process.env.RESTURL_ASX_CODE_PROD);
-    const data = await res.json();
-    const asxCode = data.map(entry => entry.ASXCode);
+    // const res = await fetch(process.env.RESTURL_ASX_CODE_PROD);
+    // const data = await res.json();
+    // const asxCode = data.map(entry => entry.ASXCode);
 
-    asxCode.forEach(code => {
-      paths[`/shares/${code}.AUS.html`] = {
-        page: "/shares",
-        query: { shareCode: `${code}.AUS` }
-      };
-    });
+    // asxCode.forEach(code => {
+    //   paths[`/shares/${code}.AUS`] = {
+    //     page: "/shares",
+    //     query: { shareCode: `${code}.AUS` }
+    //   };
+    // });
     return paths;
   },
   assetPrefix: assetPrefix,

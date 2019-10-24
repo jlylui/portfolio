@@ -46,12 +46,19 @@ export default class About extends Component {
             ))}
           </p>
         </div>
-        <div className="container">
+        <div className="container about">
+          <p>Hi, I'm Joycelyn.</p>
+          <blockquote className="blockquote">
+            <p className="mb-0">
+              Aspire to work on projects which deliver life-changing solutions
+              to leave a legacy behind.
+            </p>
+          </blockquote>
           <p>
-            Hi, I'm Joycelyn. I am a software engineer with experiences in
-            full-stack web development, CICD and automation. I love exploring
-            new technologies and is always intrigued by cutting-edge technology
-            such as AI and human-computer interction.
+            Software engineer with experience in full-stack web development,
+            CICD and automation. I love exploring new technologies, solving
+            problems and challenges. I'm also intrigued by cutting-edge
+            technology such as AI and bionics.
           </p>
         </div>
       </div>

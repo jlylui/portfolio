@@ -40,7 +40,8 @@ const NavBar = props => {
   };
 
   useEffect(() => {
-    const scroll_height = 150;
+    const scroll_height = window.innerHeight * 0.2;
+    console.log(scroll_height);
     setIsLoading(false);
     const updateNavbarColor = () => {
       if (
@@ -64,15 +65,15 @@ const NavBar = props => {
   }, [isLoading]);
 
   const navMenu = (
-    <div className={navClassName}>
+    <div className={navClassName} style={{ width: "100%" }}>
       <ul className="navbar-nav ml-auto nav-ul">
         {props.navMenu.map((menu, index) => (
           <li className="nav-item nav-li" key={index}>
             <Link href={menu.link}>
               <a href={menu.link} className="nav-link" onClick={handleNav}>
                 {menu.icon != "" ? (
-                  <span>
-                    <FontAwesomeIcon icon={menu.icon} />{" "}
+                  <span style={{ margin: "0 4px" }}>
+                    <FontAwesomeIcon icon={menu.icon} />
                   </span>
                 ) : null}
                 {menu.label}
@@ -111,7 +112,6 @@ const NavBar = props => {
             <span className="navbar-toggler-icon"></span>
           </button>
         </div>
-
         {navMenu}
       </div>
     </nav>

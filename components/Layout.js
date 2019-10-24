@@ -1,5 +1,7 @@
 import React from "react";
 import Footer from "../components/Footer";
+import "../static/css/material-kit.css";
+import "../static/css/style.css";
 
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -11,15 +13,16 @@ import {
   faHeart,
   faCoffee,
   faSearch,
-  faSpinner
+  faSpinner,
+  faLaptopCode,
+  faLaptopMedical,
+  faMicroscope,
+  faGraduationCap
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
 import Head from "next/head";
 import NavBar from "./NavBar";
-
-import "../static/css/material-kit.css";
-import "../static/css/style.css";
 
 config.autoAddCss = false;
 library.add(
@@ -32,7 +35,11 @@ library.add(
   faCoffee,
   faEnvelope,
   faSearch,
-  faSpinner
+  faSpinner,
+  faLaptopCode,
+  faLaptopMedical,
+  faMicroscope,
+  faGraduationCap
 );
 
 const navMenu = [

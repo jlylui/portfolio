@@ -93,6 +93,8 @@ const Shares = props => {
 };
 
 Shares.getInitialProps = async ({ query }) => {
+  console.log(query.shareCode);
+  console.log(query.shareCode.replace(".html", ""));
   const commonParams = {
     symbol: query.shareCode,
     apikey: "H8HG5KWNVPK38JDU"

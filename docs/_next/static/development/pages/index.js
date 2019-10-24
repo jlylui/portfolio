@@ -23,6 +23,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "G:\\dev\\portfolio\\components\\About.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement;
 
 
@@ -36,6 +37,7 @@ var socialMedia = [{
   icon: ["fab", "pinterest"],
   link: "https://www.pinterest.co.uk/heyjoycelyn/"
 }];
+var assetPrefix = "";
 
 var About =
 /*#__PURE__*/
@@ -53,35 +55,134 @@ function (_Component) {
     value: function render() {
       return __jsx("div", {
         className: "col-lg-4 text-center",
-        id: "about"
+        id: "about",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
       }, __jsx("img", {
-        src: "/static/img/me.jpg",
+        src: "".concat(assetPrefix, "/static/img/me.jpg"),
         alt: "",
-        className: "img-raised rounded-circle img-fluid profile-img"
+        className: "img-raised rounded-circle img-fluid profile-img",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
       }), __jsx("div", {
-        className: "profile-name"
+        className: "profile-name",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
       }, __jsx("h2", {
-        className: "profile-title title"
-      }, "Joycelyn Lui"), __jsx("h6", null, "Passion driven | Focused | Team Player"), __jsx("p", null, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
-        icon: ["far", "envelope"]
+        className: "profile-title title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, "Joycelyn Lui"), __jsx("h6", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, "Passion driven | Focused | Team Player"), __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
+        icon: ["far", "envelope"],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
       }), " ", __jsx("a", {
-        href: "mailto:joycelyn.lui@hotmail.com"
+        href: "mailto:joycelyn.lui@hotmail.com",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
       }, "joycelyn.lui@hotmail.com"))), __jsx("div", {
-        className: "row justify-content-center"
-      }, __jsx("p", null, socialMedia.map(function (media, index) {
+        className: "row justify-content-center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }, __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, socialMedia.map(function (media, index) {
         return __jsx("a", {
           href: media.link,
           target: "_blank",
-          key: index
+          key: index,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 41
+          },
+          __self: this
         }, __jsx("button", {
-          className: "btn btn-social btn-link"
+          className: "btn btn-social btn-link",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 42
+          },
+          __self: this
         }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_6__["FontAwesomeIcon"], {
           icon: media.icon,
-          size: "2x"
+          size: "2x",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 43
+          },
+          __self: this
         })));
       }))), __jsx("div", {
-        className: "container"
-      }, __jsx("p", null, "Hi, I'm Joycelyn. I am a software engineer with experiences in full-stack web development, CICD and automation. I love exploring new technologies and is always intrigued by cutting-edge technology such as AI and human-computer interction.")));
+        className: "container about",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, "Hi, I'm Joycelyn."), __jsx("blockquote", {
+        className: "blockquote",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, __jsx("p", {
+        className: "mb-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, "Aspire to work on projects which deliver life-changing solutions to leave a legacy behind.")), __jsx("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, "Software engineer with experience in full-stack web development, CICD and automation. I love exploring new technologies, solving problems and challenges. I'm also intrigued by cutting-edge technology such as AI and bionics.")));
     }
   }]);
 
@@ -116,6 +217,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _jsxFileName = "G:\\dev\\portfolio\\components\\Form.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement;
 
 
@@ -200,7 +302,12 @@ var Form = function Form() {
       setSubmitting(false); // }, 400);
 
       requestSaveForm(values);
-    }
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
   }, function (_ref3) {
     var values = _ref3.values,
         errors = _ref3.errors,
@@ -210,41 +317,124 @@ var Form = function Form() {
         handleSubmit = _ref3.handleSubmit,
         isSubmitting = _ref3.isSubmitting;
     return __jsx("form", {
-      onSubmit: handleSubmit
+      onSubmit: handleSubmit,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 74
+      },
+      __self: this
     }, __jsx("div", {
-      className: "form-row"
+      className: "form-row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 75
+      },
+      __self: this
     }, __jsx("div", {
-      className: "form-group col-md-6 ".concat(touched.first ? errors.first ? "has-danger" : "has-success" : "")
-    }, __jsx("label", null, "First Name", __jsx("span", {
-      className: "text-danger"
+      className: "form-group col-md-6 ".concat(touched.first ? errors.first ? "has-danger" : "has-success" : ""),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 76
+      },
+      __self: this
+    }, __jsx("label", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }, "First Name", __jsx("span", {
+      className: "text-danger",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 85
+      },
+      __self: this
     }, " *")), errors.first && touched.first ? __jsx("span", {
-      className: "error-text"
+      className: "error-text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 88
+      },
+      __self: this
     }, errors.first) : null, __jsx("input", {
       type: "text",
       className: "form-control",
       name: "first",
       value: values.first,
       onChange: handleChange // required={true}
-
+      ,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 90
+      },
+      __self: this
     })), __jsx("div", {
-      className: "form-group col-md-6 ".concat(touched.last ? errors.last ? "has-danger" : "has-success" : "")
-    }, __jsx("label", null, "Last Name", __jsx("span", {
-      className: "text-danger"
+      className: "form-group col-md-6 ".concat(touched.last ? errors.last ? "has-danger" : "has-success" : ""),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99
+      },
+      __self: this
+    }, __jsx("label", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 103
+      },
+      __self: this
+    }, "Last Name", __jsx("span", {
+      className: "text-danger",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 104
+      },
+      __self: this
     }, " *")), errors.last && touched.last ? __jsx("span", {
-      className: "error-text"
+      className: "error-text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 107
+      },
+      __self: this
     }, errors.last) : null, __jsx("input", {
       type: "text",
       className: "form-control",
       name: "last",
       value: values.last,
       onChange: handleChange // required={true}
-
+      ,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 109
+      },
+      __self: this
     }))), __jsx("div", {
-      className: "form-group ".concat(touched.email ? errors.email ? "has-danger" : "has-success" : "")
-    }, __jsx("label", null, "Email", __jsx("span", {
-      className: "text-danger"
+      className: "form-group ".concat(touched.email ? errors.email ? "has-danger" : "has-success" : ""),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 119
+      },
+      __self: this
+    }, __jsx("label", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 123
+      },
+      __self: this
+    }, "Email", __jsx("span", {
+      className: "text-danger",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 124
+      },
+      __self: this
     }, " *")), errors.email && touched.email ? __jsx("span", {
-      className: "error-text"
+      className: "error-text",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 127
+      },
+      __self: this
     }, errors.email) : null, __jsx("input", {
       type: "email",
       className: "form-control",
@@ -252,20 +442,78 @@ var Form = function Form() {
       name: "email",
       value: values.email,
       onChange: handleChange //   required={true}
-
+      ,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 129
+      },
+      __self: this
     })), __jsx("div", {
       style: {
         textAlign: "right"
-      }
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 139
+      },
+      __self: this
     }, __jsx("button", {
       type: "submit",
       className: "btn btn-primary",
-      disabled: isSubmitting
+      disabled: isSubmitting,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 140
+      },
+      __self: this
     }, "Submit")));
   });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Form);
+
+/***/ }),
+
+/***/ "./components/Link.js":
+/*!****************************!*\
+  !*** ./components/Link.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _jsxFileName = "G:\\dev\\portfolio\\components\\Link.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+var assetPrefix = "";
+
+var Link = function Link(_ref) {
+  var href = _ref.href,
+      rest = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_1__["default"])(_ref, ["href"]);
+
+  return __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+    href: href,
+    as: "".concat(assetPrefix).concat(href)
+  }, rest, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Link);
 
 /***/ }),
 
@@ -288,6 +536,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
 
 
+var _jsxFileName = "G:\\dev\\portfolio\\components\\Search.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -361,15 +610,40 @@ var Search = function Search(props) {
 
   return __jsx("div", {
     className: "",
-    id: "asxSearch"
+    id: "asxSearch",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
   }, __jsx("form", {
-    onSubmit: handleSubmit
+    onSubmit: handleSubmit,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
   }, __jsx("div", {
-    className: "form-row"
+    className: "form-row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
   }, __jsx("div", {
-    className: "col-md-6 form-group bmd-form-group ".concat(inputFocused, " ").concat(keywords !== "" ? "is-filled" : "", " ")
+    className: "col-md-6 form-group bmd-form-group ".concat(inputFocused, " ").concat(keywords !== "" ? "is-filled" : "", " "),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
   }, __jsx("label", {
-    className: "bmd-label-floating"
+    className: "bmd-label-floating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
   }, "Company/Code"), __jsx("input", {
     type: "text",
     className: "form-control",
@@ -385,31 +659,86 @@ var Search = function Search(props) {
     },
     onBlur: function onBlur() {
       return setInputFocused("");
-    }
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
   })), __jsx("div", {
-    className: "col form-group bmd-form-group + ".concat(region !== "" ? "is-filled" : "", "\n            ")
+    className: "col form-group bmd-form-group + ".concat(region !== "" ? "is-filled" : "", "\n            "),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
   }, __jsx("label", {
-    className: "bmd-label-floating"
+    className: "bmd-label-floating",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
   }, "Select Region (Optional)"), __jsx("select", {
     className: "form-control selectpicker",
     id: "",
     onChange: function onChange(event) {
       return setRegion(event.target.value);
-    }
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67
+    },
+    __self: this
   }, __jsx("option", {
-    className: "dropdown-item"
+    className: "dropdown-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
   }), __jsx("option", {
-    className: "dropdown-item"
+    className: "dropdown-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
   }, "Australia"), __jsx("option", {
-    className: "dropdown-item"
+    className: "dropdown-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
   }, "United States"))), __jsx("div", {
-    className: "col-auto text-left form-group bmd-form-group"
+    className: "col-auto text-left form-group bmd-form-group",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
   }, __jsx("button", {
-    className: "btn btn-primary btn-raised btn-fab btn-round btn-sm"
+    className: "btn btn-primary btn-raised btn-fab btn-round btn-sm",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
   }, __jsx("span", {
-    className: "material-icons"
+    className: "material-icons",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
   }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
-    icon: "search"
+    icon: "search",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
   })))))));
 };
 
@@ -429,8 +758,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Search__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Search */ "./components/Search.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Link */ "./components/Link.js");
+var _jsxFileName = "G:\\dev\\portfolio\\components\\StockData.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -450,41 +779,219 @@ var StockData = function StockData() {
   };
 
   return __jsx("div", {
-    className: "section"
-  }, __jsx("h4", null, "Investment Project"), __jsx("div", {
+    className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, "Investment Project"), __jsx("div", {
     style: {
       padding: "10px 0"
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
     href: {
       pathname: "/shares",
       query: {
         shareCode: "APX.AUS"
       }
     },
-    as: "shares/APX.AUS"
+    as: "shares/APX.AUS",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
+    },
+    __self: this
   }, __jsx("a", {
-    className: "btn btn-primary btn-raised inline-btn"
+    className: "btn btn-primary btn-raised inline-btn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
+    },
+    __self: this
   }, "APX"))), __jsx(_Search__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    onSubmit: handleResponse
-  }), response ? response.data["bestMatches"] && response.data["bestMatches"].length > 0 ? __jsx("ul", null, response.data["bestMatches"].filter(function (match) {
+    onSubmit: handleResponse,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }), response ? response.data["bestMatches"] && response.data["bestMatches"].length > 0 ? __jsx("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, response.data["bestMatches"].filter(function (match) {
     return response.inputRegion !== "" ? match["4. region"] === response.inputRegion : match;
   }).map(function (result, index) {
     return __jsx("li", {
-      key: index
-    }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+      key: index,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, __jsx(_Link__WEBPACK_IMPORTED_MODULE_2__["default"], {
       href: {
         pathname: "/shares",
         query: {
           shareCode: result["1. symbol"]
         }
       },
-      as: "shares/".concat(result["1. symbol"])
-    }, __jsx("a", null, result["1. symbol"], " (", result["2. name"], " ", response.inputRegion !== "" ? "" : result["4. region"], ")")));
-  })) : __jsx("p", null, "No match found") : null);
+      as: "shares/".concat(result["1. symbol"]),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, __jsx("a", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }, result["1. symbol"], " (", result["2. name"], " ", response.inputRegion !== "" ? "" : result["4. region"], ")")));
+  })) : __jsx("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 64
+    },
+    __self: this
+  }, "No match found") : null);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (StockData);
+
+/***/ }),
+
+/***/ "./components/TextPopoverBox.js":
+/*!**************************************!*\
+  !*** ./components/TextPopoverBox.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+var _jsxFileName = "G:\\dev\\portfolio\\components\\TextPopoverBox.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+var TextPopoverBox = function TextPopoverBox(props) {
+  console.log(props.textArray);
+  var textArray = props.textArray.map(function (text, index) {
+    var align = "left";
+    var popoverAlign = "right"; // if (index % 2 === 1) {
+    //   align = "right";
+    //   popoverAlign = "left";
+    // }
+
+    return __jsx("div", {
+      key: index,
+      className: "animated fadeInUp",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "row",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "text-box box-".concat(align),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "round-icon round-icon-".concat(align),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_1__["FontAwesomeIcon"], {
+      icon: text.icon,
+      size: "2x",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "popover bs-popover-".concat(popoverAlign, " bs-popover-").concat(popoverAlign, "-docs"),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, __jsx("div", {
+      className: "arrow",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), __jsx("div", {
+      className: "popover-body",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }, __jsx("h6", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, text.where, __jsx("span", {
+      className: "text-muted",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, text.when)), __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, text.what))))));
+  });
+  return __jsx("div", {
+    className: "popover-box-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, textArray);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (TextPopoverBox);
 
 /***/ }),
 
@@ -573,6 +1080,17 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/define-proper
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-descriptor */ "./node_modules/core-js/library/fn/object/get-own-property-descriptor.js");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-property-symbols */ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js");
 
 /***/ }),
 
@@ -953,6 +1471,39 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
@@ -1006,6 +1557,74 @@ function _inherits(subClass, superClass) {
     }
   });
   if (superClass) Object(_setPrototypeOf__WEBPACK_IMPORTED_MODULE_1__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutProperties.js ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutProperties; });
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/get-own-property-symbols */ "./node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js");
+/* harmony import */ var _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js");
+
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = Object(_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(source, excluded);
+  var key, i;
+
+  if (_core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default.a) {
+    var sourceSymbolKeys = _core_js_object_get_own_property_symbols__WEBPACK_IMPORTED_MODULE_0___default()(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*****************************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _objectWithoutPropertiesLoose; });
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/keys */ "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js");
+/* harmony import */ var _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_keys__WEBPACK_IMPORTED_MODULE_0__);
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+
+  var sourceKeys = _core_js_object_keys__WEBPACK_IMPORTED_MODULE_0___default()(source);
+
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
 }
 
 /***/ }),
@@ -6293,6 +6912,19 @@ var $Object = __webpack_require__(/*! ../../modules/_core */ "./node_modules/cor
 module.exports = function getOwnPropertyDescriptor(it, key) {
   return $Object.getOwnPropertyDescriptor(it, key);
 };
+
+
+/***/ }),
+
+/***/ "./node_modules/core-js/library/fn/object/get-own-property-symbols.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/core-js/library/fn/object/get-own-property-symbols.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.symbol */ "./node_modules/core-js/library/modules/es6.symbol.js");
+module.exports = __webpack_require__(/*! ../../modules/_core */ "./node_modules/core-js/library/modules/_core.js").Object.getOwnPropertySymbols;
 
 
 /***/ }),
@@ -33546,7 +34178,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_About__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/About */ "./components/About.js");
 /* harmony import */ var _components_StockData__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/StockData */ "./components/StockData.js");
 /* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Form */ "./components/Form.js");
+/* harmony import */ var _components_TextPopoverBox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/TextPopoverBox */ "./components/TextPopoverBox.js");
+var _jsxFileName = "G:\\dev\\portfolio\\pages\\index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -33565,33 +34200,141 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   </div>
   </div>       */
 }
+var timeline = [{
+  where: "Telstra",
+  what: "Software Engineer",
+  when: "Feb 2018 – Present",
+  icon: "laptop-code"
+}, {
+  where: "Telstra",
+  what: "Networks Technology Graduate",
+  when: "Jan 2017 – Jan 2018",
+  icon: "laptop-code"
+}, {
+  where: "ResMed",
+  what: "Verification & Validation Engineer (Intern)",
+  when: "Nov 2015 - Dec 2016",
+  icon: "laptop-medical"
+}, {
+  where: "Bionic Vision Australia",
+  what: "UNSW Team Research Assistant",
+  when: "Mar 2015 - Oct 2015",
+  icon: "microscope"
+}, {
+  where: "University of New South Wales",
+  what: "Bachelor of Mechatronic & Master of Biomedical Engineering",
+  when: "2012 - 2016",
+  icon: "graduation-cap"
+}];
 
 var Index = function Index(props) {
   console.log("rendering index");
+  console.log("");
   return __jsx("div", {
-    className: "row"
-  }, __jsx(_components_About__WEBPACK_IMPORTED_MODULE_1__["default"], null), __jsx("div", {
-    className: "col-lg-8"
+    className: "row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, __jsx(_components_About__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "col-lg-8",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
   }, __jsx("div", {
     id: "projects",
-    className: "container"
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
   }, __jsx("h3", {
-    className: "title"
-  }, "Projects"), __jsx(_components_StockData__WEBPACK_IMPORTED_MODULE_2__["default"], null)), __jsx("div", {
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, "Projects"), __jsx(_components_StockData__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  })), __jsx("div", {
     id: "timeline",
-    className: "container"
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
   }, __jsx("h3", {
-    className: "title"
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
   }, "Timeline"), __jsx("div", {
-    className: "section"
-  }, __jsx("h4", null, "Highlights"), __jsx("p", null, "Faucibus ornare suspendisse sed nisi lacus sed. Iaculis eu non diam phasellus vestibulum lorem. At auctor urna nunc id. Ultrices in iaculis nunc sed augue lacus. Ut enim blandit volutpat maecenas volutpat blandit aliquam. At ultrices mi tempus imperdiet nulla. Eu augue ut lectus arcu bibendum at. Condimentum lacinia quis vel eros donec ac odio tempor orci. Vestibulum mattis ullamcorper velit sed ullamcorper. Dis parturient montes nascetur ridiculus mus mauris vitae ultricies."), __jsx("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh tortor id aliquet lectus proin nibh nisl. Bibendum arcu vitae elementum curabitur. Nulla facilisi morbi tempus iaculis urna id volutpat lacus. Volutpat diam ut venenatis tellus in metus. Euismod elementum nisi quis eleifend quam. Cursus metus aliquam eleifend mi in nulla posuere sollicitudin. Amet dictum sit amet justo donec enim diam vulputate ut. Egestas maecenas pharetra convallis posuere morbi leo. Mollis nunc sed id semper risus in hendrerit. Quis risus sed vulputate odio ut enim. Velit laoreet id donec ultrices. Interdum varius sit amet mattis vulputate. Netus et malesuada fames ac turpis egestas maecenas. Pellentesque eu tincidunt tortor aliquam nulla. Nibh tellus molestie nunc non blandit. Risus in hendrerit gravida rutrum quisque non tellus orci ac. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing vitae. Sit amet facilisis magna etiam tempor orci eu lobortis elementum. Viverra mauris in aliquam sem."))), __jsx("div", {
+    className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, __jsx("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, "Highlights"), __jsx(_components_TextPopoverBox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    textArray: timeline,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }))), __jsx("div", {
     id: "form",
-    className: "container"
+    className: "container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
   }, __jsx("h3", {
-    className: "title"
+    className: "title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
   }, "Contact Form"), __jsx("div", {
-    className: "section"
-  }, __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_3__["default"], null)))));
+    className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, __jsx(_components_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  })))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
