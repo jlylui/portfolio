@@ -1,8 +1,8 @@
 const postTableData = (req, res, db) => {
-  const { first, last, email } = req.body;
+  const { name, email, message } = req.body;
   const added = new Date();
   db("contacts")
-    .insert({ first, last, email, added })
+    .insert({ name, email, message, added })
     .returning("*")
     .then(item => {
       res.json(item);

@@ -197,6 +197,18 @@ h6 .text-muted {
   font-size: 14px;
 }
 
+ul li {
+  font-size: 14px !important;
+}
+
+.container.about .section {
+  padding: 12px 0px;
+}
+
+.modal.show {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
 @media all and (max-width: 991px) {
   .nav-ul {
     display: table;
@@ -251,6 +263,13 @@ h6 .text-muted {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .home-page-container {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

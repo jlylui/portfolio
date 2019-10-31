@@ -19,7 +19,7 @@ const requestSaveForm = async data => {
   const response = await saveForm(data);
   const res = await response.json();
   if (response.status === 200) {
-    const { first, last, email } = res;
+    const { name, email, message } = res;
   }
   console.log(res);
   setTimeout(() => {
@@ -30,24 +30,21 @@ const requestSaveForm = async data => {
 };
 
 const formSchema = Yup.object().shape({
-  first: Yup.string()
-    .min(2, "*invalid")
-    .max(50, "*invalid")
-    .required("*required"),
-  last: Yup.string()
+  name: Yup.string()
     .min(2, "*invalid")
     .max(50, "*invalid")
     .required("*required"),
   email: Yup.string()
     .email("*invalid email")
-    .required("*required")
+    .required("*required"),
+  message: Yup.string().required("*required")
 });
 
 const Form = () => {
   const initialValues = {
-    first: "",
-    last: "",
-    email: ""
+    name: "",
+    email: "",
+    message: ""
   };
 
   return (
@@ -74,66 +71,69 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <div
-              className={`form-group col-md-6 ${
-                touched.first
-                  ? errors.first
-                    ? "has-danger"
-                    : "has-success"
-                  : ""
+              className={`form-group col-md-5 ${
+                touched.name ? (errors.name ? "has-danger" : "has-success") : ""
               }`}>
               <label>
-                First Name<span className="text-danger"> *</span>
+                Name<span className="text-danger"> *</span>
               </label>
-              {errors.first && touched.first ? (
-                <span className="error-text">{errors.first}</span>
+              {errors.name && touched.name ? (
+                <span className="error-text">{errors.name}</span>
               ) : null}
               <input
                 type="text"
                 className="form-control"
-                name="first"
-                value={values.first}
+                name="name"
+                value={values.name}
                 onChange={handleChange}
                 // required={true}
               />
             </div>
             <div
-              className={`form-group col-md-6 ${
-                touched.last ? (errors.last ? "has-danger" : "has-success") : ""
+              className={`form-group col-md-7 ${
+                touched.email
+                  ? errors.email
+                    ? "has-danger"
+                    : "has-success"
+                  : ""
               }`}>
               <label>
-                Last Name<span className="text-danger"> *</span>
+                Email<span className="text-danger"> *</span>
               </label>
-              {errors.last && touched.last ? (
-                <span className="error-text">{errors.last}</span>
+              {errors.email && touched.email ? (
+                <span className="error-text">{errors.email}</span>
               ) : null}
               <input
-                type="text"
+                type="email"
                 className="form-control"
-                name="last"
-                value={values.last}
+                placeholder="example@example.com"
+                name="email"
+                value={values.email}
                 onChange={handleChange}
-                // required={true}
               />
             </div>
           </div>
           <div
             className={`form-group ${
-              touched.email ? (errors.email ? "has-danger" : "has-success") : ""
+              touched.message
+                ? errors.message
+                  ? "has-danger"
+                  : "has-success"
+                : ""
             }`}>
             <label>
-              Email<span className="text-danger"> *</span>
+              Message<span className="text-danger"> *</span>
             </label>
-            {errors.email && touched.email ? (
-              <span className="error-text">{errors.email}</span>
+            {errors.message && touched.message ? (
+              <span className="error-text">{errors.message}</span>
             ) : null}
-            <input
-              type="email"
+            <textarea
+              type="message"
               className="form-control"
-              placeholder="example@example.com"
-              name="email"
-              value={values.email}
+              name="message"
+              rows="4"
+              value={values.message}
               onChange={handleChange}
-              //   required={true}
             />
           </div>
           <div style={{ textAlign: "right" }}>
@@ -141,7 +141,7 @@ const Form = () => {
               type="submit"
               className="btn btn-primary"
               disabled={isSubmitting}>
-              Submit
+              Send
             </button>
           </div>
         </form>

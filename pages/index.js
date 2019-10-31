@@ -2,7 +2,6 @@ import React from "react";
 
 import About from "../components/About";
 import StockData from "../components/StockData";
-import Form from "../components/Form";
 import TextPopoverBox from "../components/TextPopoverBox";
 
 // Div Format for single column page
@@ -57,27 +56,29 @@ const Index = props => {
   console.log("rendering index");
   console.log(process.env.ASSET_PREFIX);
   return (
-    <div className="row">
-      <About />
-      <div className="col-lg-8">
-        <div id="projects" className="container">
-          {/* PRJECT SECTION =========================================================*/}
-          <h3 className="title">Projects</h3>
-          <StockData />
-        </div>
-        {/* TIMELINE SECTION =========================================================*/}
-        <div id="timeline" className="container">
-          <h3 className="title">Timeline</h3>
-          <div className="section">
-            <h4>Highlights</h4>
-            <TextPopoverBox textArray={timeline} />
+    <div className="home-page-container">
+      <div className="row">
+        <About />
+        <div className="col-lg-8">
+          <div id="projects" className="container">
+            {/* PRJECT SECTION =========================================================*/}
+            <h3 className="title">Projects</h3>
+            <StockData />
+          </div>
+          {/* TIMELINE SECTION =========================================================*/}
+          <div id="timeline" className="container">
+            <h3 className="title">Timeline</h3>
+            <div className="section">
+              <h4>Highlights</h4>
+              <TextPopoverBox textArray={timeline} />
+            </div>
           </div>
         </div>
-        <div id="form" className="container">
-          {/* FORM SECTION =========================================================*/}
-          <h3 className="title">Contact Form</h3>
-          <div className="section">
-            <Form />
+      </div>
+      <div className="row">
+        <div className="container">
+          <div className="container single-column">
+            {/* SINGLE COLUMN SECTION =========================================================*/}
           </div>
         </div>
       </div>
