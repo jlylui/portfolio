@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 /*
  =========================================================
  * Material Kit - v2.0.6
@@ -17549,10 +17550,10 @@ footer .pull-center {
     position: relative;
     z-index: 3;
   }
-  .navbar-collapse .navbar-nav .nav-item .nav-link {
+  /* .navbar-collapse .navbar-nav .nav-item .nav-link {
     color: #3C4858;
     margin: 5px 15px;
-  }
+  } */
   .navbar-collapse .navbar-nav .nav-item.active .nav-link,
   .navbar-collapse .navbar-nav .nav-item.active .nav-link:hover,
   .navbar-collapse .navbar-nav .nav-item.active .nav-link:focus,
@@ -17563,14 +17564,14 @@ footer .pull-center {
   .navbar-collapse .navbar-nav .nav-item.button-container .nav-link {
     margin: 15px;
   }
-  .navbar-collapse .navbar-nav .nav-item:after {
+  /* .navbar-collapse .navbar-nav .nav-item:after {
     width: calc(100% - 30px);
     content: "";
     display: block;
     height: 1px;
     margin-left: 15px;
     background-color: #e5e5e5;
-  }
+  } */
   .navbar-collapse .navbar-nav .nav-item:last-child:after {
     display: none;
   }
@@ -18434,6 +18435,54 @@ svg:not(:root).svg-inline--fa {
 .fad.fa-inverse {
   color: #fff; }
 
+.header-filter::before {
+  /* background: rgba(44, 168, 255, 0.1) !important; */
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(60, 72, 88, 0.4)
+  ) !important;
+}
+
+.page-header.index-page {
+  height: 100vh;
+}
+
+.page-header.content-page {
+  height: 50vh;
+}
+
+.page-header .container h3 {
+  margin-top: 0;
+}
+.section {
+  padding-top: 0;
+  padding-bottom: 70px;
+}
+
+.profile-img {
+  max-width: 300px;
+  width: 70%;
+  margin: 0 auto;
+  /* transform: translate3d(0, -50%, 0); */
+}
+
+.profile-about {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.profile-title {
+  margin-block-start: 0 !important;
+  font-family: "Montserrat";
+  font-size: 2em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.btn.btn-social.btn-link {
+  color: #fff;
+}
+
 .rv-crosshair__inner__content {
   width: 120px;
 }
@@ -18458,32 +18507,6 @@ svg:not(:root).svg-inline--fa {
 
 .inline-btn {
   margin: 0 !important;
-}
-
-.page-header {
-  height: 50vh;
-}
-
-.section {
-  padding-top: 0;
-  padding-bottom: 70px;
-}
-
-.profile-img {
-  max-width: 250px;
-  width: 70%;
-  margin: 0 auto;
-  transform: translate3d(0, -50%, 0);
-}
-
-.profile-name {
-  margin-top: -80px;
-  margin-bottom: 20px;
-}
-.profile-title {
-  margin-block-start: 0 !important;
-  font-family: "Open Sans", serif;
-  /* text-transform: uppercase; */
 }
 
 .nav-li:hover {
@@ -18623,12 +18646,35 @@ h6 .text-muted {
   margin-left: 12px;
 }
 
-.container.about {
-  text-align: justify;
-}
-
 .container.about .blockquote p {
   font-size: 14px;
+}
+
+ul li {
+  font-size: 14px !important;
+}
+
+.container.about .section {
+  padding: 12px 0px;
+}
+
+.container .about {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modal.show {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+@media all and (max-width: 576px) {
+  p a button {
+    padding: 12px 15px !important;
+  }
+
+  .profile-img {
+    max-width: 200px;
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -18685,10 +18731,24 @@ h6 .text-muted {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .home-page-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .home-page-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 
