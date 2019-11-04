@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 import "../static/css/material-kit.css";
 import "../static/css/style.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library, config } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -84,6 +84,11 @@ const socialMedia = [
     target: "_blank"
   },
   {
+    icon: ["fab", "instagram"],
+    link: "https://www.instagram.com/alphacs4/",
+    target: "_blank"
+  },
+  {
     icon: ["fab", "pinterest"],
     link: "https://www.pinterest.co.uk/heyjoycelyn/",
     target: "_blank"
@@ -103,10 +108,36 @@ const Layout = props => {
       </Head>
       <NavBar navMenu={navMenu} />
       <div
-        className="page-header header-filter"
+        className={`${props.className} page-header header-filter`}
         style={{
-          backgroundImage: `url("${assetPrefix}/static/img/header-02.jpg")`
-        }}></div>
+          backgroundImage: `url("${assetPrefix}/static/img/header-04.jpg")`
+        }}>
+        <div className="container">
+          <div className={`${props.hide ? `collapse ` : ``}text-center`}>
+            <img
+              src={`${assetPrefix}/static/img/jl-icon-19144-light-square.png`}
+              alt=""
+              className="img-fluid profile-img"
+            />
+            <h2 className="profile-title ">Joycelyn Lui</h2>
+          </div>
+          <h3 className="text-center">{props.subtitle}</h3>
+          <div
+            className={`${
+              props.hide ? `collapse ` : ``
+            }row justify-content-center`}>
+            <p>
+              {socialMedia.map((media, index) => (
+                <a href={media.link} target="_blank" key={index}>
+                  <button className="btn btn-social btn-link">
+                    <FontAwesomeIcon icon={media.icon} size="2x" />
+                  </button>
+                </a>
+              ))}
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="main main-raised">{props.children}</div>
       <Footer navMenu={navMenu} socialMedia={socialMedia} />
     </div>

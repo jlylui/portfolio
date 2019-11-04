@@ -106,7 +106,7 @@ const Form = () => {
               <input
                 type="email"
                 className="form-control"
-                placeholder="example@example.com"
+                // placeholder="example@example.com"
                 name="email"
                 value={values.email}
                 onChange={handleChange}

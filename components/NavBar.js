@@ -65,7 +65,7 @@ const NavBar = props => {
   }, [isLoading]);
 
   const navMenu = (
-    <div className={navClassName} style={{ width: "100%" }}>
+    <div className={navClassName}>
       <ul className="navbar-nav ml-auto nav-ul">
         {props.navMenu.map((menu, index) => (
           <li className="nav-item nav-li" key={index}>
@@ -88,7 +88,7 @@ const NavBar = props => {
   handleClickOutsideRef(navRef);
 
   return (
-    <nav className={"navbar fixed-top navbar-expand-lg " + navbarColor}>
+    <nav className={"navbar fixed-top navbar-expand-md " + navbarColor}>
       <div className="container nav-container" ref={navRef}>
         <div className="navbar-translate">
           <Link href={props.navMenu[0].link}>

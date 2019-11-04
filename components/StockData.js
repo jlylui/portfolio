@@ -14,8 +14,8 @@ const StockData = () => {
   };
 
   return (
-    <div className="section">
-      <h4>Investment Project</h4>
+    <div className="section container">
+      <h4>Project Demo</h4>
       <div style={{ padding: "10px 0" }}>
         <Link
           href={{
@@ -24,8 +24,7 @@ const StockData = () => {
               shareCode: "APX.AUS"
             }
           }}
-          as={`shares/APX.AUS`}
-        >
+          as={`shares/APX.AUS`}>
           <a className="btn btn-primary btn-raised inline-btn">APX</a>
         </Link>
       </div>
@@ -50,8 +49,7 @@ const StockData = () => {
                         shareCode: result["1. symbol"]
                       }
                     }}
-                    as={`shares/${result["1. symbol"]}`}
-                  >
+                    as={`shares/${result["1. symbol"]}`}>
                     <a>
                       {result["1. symbol"]} ({result["2. name"]}{" "}
                       {response.inputRegion !== "" ? "" : result["4. region"]})
