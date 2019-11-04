@@ -234,7 +234,7 @@ ul li {
 }
 
 @media all and (max-width: 576px) {
-  a button {
+  p a button {
     padding: 12px 15px !important;
   }
 
