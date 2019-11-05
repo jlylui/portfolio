@@ -15,7 +15,8 @@ const About = () => {
         <div className="profile-about">
           <h2 className="title">About Me</h2>
           <h6
-            style={{ color: "#9C27B0", fontWeight: "bold", fontSize: "13px" }}>
+            style={{ color: "#9C27B0", fontWeight: "bold", fontSize: "13px" }}
+          >
             Passion driven | Focused | Team Player
           </h6>
           {/* <p>
@@ -41,7 +42,7 @@ const About = () => {
             I found my passion for engineering during my senior years of high
             school. I was flipping through a job guide and came across
             "Aeronautical Engineering" (as you may have guessed I was going
-            through it alphabetically). Soon after, I knew becoming an engineer,
+            through it alphabetically). Soon after, I knew that as an engineer,
             I would be able to:
             <ul>
               <li>build something amazing from the ground up</li>
@@ -54,9 +55,10 @@ const About = () => {
                 world problems
               </li>
             </ul>
-            During uni, I was fascinated by robotics. In programming courses, I
-            loved how I could come up with solutions to complex problems and get
-            to work with a lot of smart people. And so here I am today...
+            During uni, I was fascinated by robotics in particular in the
+            biomedical field. In programming courses, I loved being able to come
+            up with solutions to complex problems and working in a team with
+            other smart coders. And so here I am today...
           </p>
           <blockquote style={{ fontStyle: "italic", fontWeight: "bold" }}>
             <p className="mb-0 text-center">
@@ -97,7 +99,8 @@ const About = () => {
               marginBottom: "6px",
               fontSize: "14px"
             }}
-            onClick={handleContactModal}>
+            onClick={handleContactModal}
+          >
             here
           </a>
         </p>
@@ -108,7 +111,8 @@ const About = () => {
               id: "email-form",
               title: "Write me a message",
               handler: handleContactModal
-            }}>
+            }}
+          >
             <Form />
           </Modal>
         </div>
