@@ -55,7 +55,7 @@ const About = () => {
             I found my passion for engineering during my senior years of high
             school. I was flipping through a job guide and came across
             "Aeronautical Engineering" (as you may have guessed I was going
-            through it alphabetically). Soon after, I knew becoming an engineer,
+            through it alphabetically). Soon after, I knew that as an engineer,
             I would be able to:
             <ul>
               <li>build something amazing from the ground up</li>
@@ -68,11 +68,10 @@ const About = () => {
                 world problems
               </li>
             </ul>
-          </p>
-          <p>
-            During uni, I was fascinated by robotics. In programming courses, I
-            loved how I could come up with solutions to complex problems and get
-            to work with a lot of clever programmer. And so here I am today...
+            During uni, I was fascinated by robotics in particular in the
+            biomedical field. In programming courses, I loved being able to come
+            up with solutions to complex problems and working in a team with
+            other clever programmers. And so here I am today...
           </p>
           <blockquote style={{ fontStyle: "italic", fontWeight: "bold" }}>
             <p className="mb-0 text-center">
