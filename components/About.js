@@ -37,6 +37,20 @@ const About = () => {
             I'm also intrigued by cutting-edge technology such as AI and
             bionics.
           </p>
+        </div>
+        <div className="section">
+          <div className="row">
+            <div className="col-1">
+              <p className="text-center">
+                <FontAwesomeIcon icon="rocket" size="3x" />
+              </p>
+            </div>
+            <div className="col-11" style={{ alignSelf: "center" }}>
+              <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+                How I find my engineering passion?
+              </p>
+            </div>
+          </div>
           <p>
             I found my passion for engineering during my senior years of high
             school. I was flipping through a job guide and came across
@@ -54,9 +68,11 @@ const About = () => {
                 world problems
               </li>
             </ul>
+          </p>
+          <p>
             During uni, I was fascinated by robotics. In programming courses, I
             loved how I could come up with solutions to complex problems and get
-            to work with a lot of smart people. And so here I am today...
+            to work with a lot of clever programmer. And so here I am today...
           </p>
           <blockquote style={{ fontStyle: "italic", fontWeight: "bold" }}>
             <p className="mb-0 text-center">
@@ -67,50 +83,117 @@ const About = () => {
           </blockquote>
         </div>
         <div className="section">
-          <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
-            What do I do in my spare time?
-          </p>
-          <p>
-            Although I do spend a lot of my spare time coding but I'm also a
-            very active person. When I'm not coding, you'll find me
-          </p>
-          <ul>
-            <li>Playing basketball</li>
-            <li>Running</li>
-            <li>Indoor Rock Climbing</li>
-            <li>Hiking</li>
-          </ul>
-        </div>
-      </div>
-      <div id="form" className="container about">
-        <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
-          How to contact me?
-        </p>
-        <p>
-          You can email me or find me on different social media channels. Also
-          feel free to leave me a message{" "}
-          <a
-            className="btn btn-primary btn-link"
-            style={{
-              padding: "0px",
-              marginTop: "0px",
-              marginBottom: "6px",
-              fontSize: "14px"
-            }}
-            onClick={handleContactModal}>
-            here
-          </a>
-        </p>
-        <div className="section">
-          <Modal
-            attrs={{
-              show: contactModal,
-              id: "email-form",
-              title: "Write me a message",
-              handler: handleContactModal
-            }}>
-            <Form />
-          </Modal>
+          <div className="row">
+            <div className="col-md-6 d-flex align-items-stretch">
+              <div className="card">
+                <div className="text-center card-header card-header-primary">
+                  <div>
+                    <FontAwesomeIcon
+                      style={{
+                        transform: "translate3d(0,-12%,0)"
+                      }}
+                      icon="cube"
+                      size="4x"
+                    />
+                  </div>
+                  <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+                    What excites me about coding?
+                  </p>
+                </div>
+                <div className="card-body">
+                  <p>
+                    I love learning new things and picking up new skills. With
+                    coding, you'll never run out of things to learn (e.g. a new
+                    language, framework etc). The learning never stops and
+                    you'll always be challenged to find a better solution to
+                    existing problems.
+                  </p>
+                  <p>
+                    Literally, software is everywhere in our daily lives and
+                    coding enables you to develop applications that solve many
+                    daily life problems making our lives much easier.
+                  </p>
+                  <p>
+                    Whenever I come across cool products or services, I often go
+                    on{" "}
+                    <a href="https://stackshare.io/" target="_blank">
+                      StackShare
+                    </a>{" "}
+                    to checkout the different dev tools and tech stack used, and
+                    think to myself which dev tool should I learn next and how I
+                    can integrate it in my own projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6 d-flex align-items-stretch">
+              <div className="card">
+                <div className="text-center card-header card-header-info">
+                  <div>
+                    <FontAwesomeIcon
+                      style={{
+                        transform: "translate3d(0,-12%,0)"
+                      }}
+                      icon="basketball-ball"
+                      size="4x"
+                    />
+                  </div>
+                  <p style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+                    What do I do in my spare time?
+                  </p>
+                </div>
+
+                <div className="card-body">
+                  <p>
+                    Although I do spend a lot of my spare time coding but I'm
+                    also a very active person. When I'm not coding, you'll find
+                    me
+                  </p>
+                  <ul>
+                    <li>Playing basketball</li>
+                    <li>Running</li>
+                    <li>Indoor Rock Climbing</li>
+                    <li>Hiking</li>
+                  </ul>
+                </div>
+                <div id="form" className="container about">
+                  <p
+                    style={{
+                      textTransform: "uppercase",
+                      fontWeight: "bold"
+                    }}>
+                    How to contact me?
+                  </p>
+                  <p>
+                    You can email me or find me on different social media
+                    channels. Also feel free to leave me a message{" "}
+                    <a
+                      className="btn btn-info btn-link"
+                      style={{
+                        padding: "0px",
+                        marginTop: "0px",
+                        marginBottom: "6px",
+                        fontSize: "14px"
+                      }}
+                      onClick={handleContactModal}>
+                      here
+                    </a>
+                  </p>
+                  <div className="section">
+                    <Modal
+                      attrs={{
+                        show: contactModal,
+                        id: "email-form",
+                        title: "Write me a message",
+                        handler: handleContactModal
+                      }}>
+                      <Form />
+                    </Modal>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

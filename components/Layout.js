@@ -17,7 +17,10 @@ import {
   faLaptopCode,
   faLaptopMedical,
   faMicroscope,
-  faGraduationCap
+  faGraduationCap,
+  faCube,
+  faRocket,
+  faBasketballBall
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -31,6 +34,9 @@ library.add(
   faUser,
   faCode,
   faHistory,
+  faCube,
+  faRocket,
+  faBasketballBall,
   faHeart,
   faCoffee,
   faEnvelope,

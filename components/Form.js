@@ -139,7 +139,7 @@ const Form = () => {
           <div style={{ textAlign: "right" }}>
             <button
               type="submit"
-              className="btn btn-primary"
+              className="btn btn-info"
               disabled={isSubmitting}>
               Send
             </button>
