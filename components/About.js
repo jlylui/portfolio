@@ -68,7 +68,7 @@ const About = () => {
                 world problems
               </li>
             </ul>
-            During uni, I was fascinated by robotics in particular in the
+            During uni, I was fascinated by robotics particularly in the
             biomedical field. In programming courses, I loved being able to come
             up with solutions to complex problems and working in a team with
             other clever programmers. And so here I am today...
@@ -108,9 +108,9 @@ const About = () => {
                     existing problems.
                   </p>
                   <p>
-                    Literally, software is everywhere in our daily lives and
-                    coding enables you to develop applications that solve many
-                    daily life problems making our lives much easier.
+                    When I look around, I'm surrounded by software in my daily
+                    life. To me, having the ability to develop applications that
+                    solve many life problems excites me.
                   </p>
                   <p>
                     Whenever I come across cool products or services, I often go
@@ -118,9 +118,9 @@ const About = () => {
                     <a href="https://stackshare.io/" target="_blank">
                       StackShare
                     </a>{" "}
-                    to checkout the different dev tools and tech stack used, and
-                    think to myself which dev tool should I learn next and how I
-                    can integrate it in my own projects.
+                    to check out the different dev tools and tech stack used,
+                    and think to myself which dev tool should I learn next and
+                    how I can integrate it in my own projects.
                   </p>
                 </div>
               </div>
@@ -153,6 +153,7 @@ const About = () => {
                     <li>Running</li>
                     <li>Indoor Rock Climbing</li>
                     <li>Hiking</li>
+                    <li>Reading</li>
                   </ul>
                 </div>
                 <div id="form" className="container about">

@@ -49,6 +49,12 @@ const timeline = [
     what: "Bachelor of Mechatronic & Master of Biomedical Engineering",
     when: "2012 - 2016",
     icon: "graduation-cap"
+  },
+  {
+    where: "St George Girls High School",
+    what: `When I discovered my engineering passion (went to the Great Engineering Challenge hosted by UNSW).`,
+    when: "2010 - 2011",
+    icon: "robot"
   }
 ];
 

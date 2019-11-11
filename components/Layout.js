@@ -20,7 +20,8 @@ import {
   faGraduationCap,
   faCube,
   faRocket,
-  faBasketballBall
+  faBasketballBall,
+  faRobot
 } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 
@@ -45,7 +46,8 @@ library.add(
   faLaptopCode,
   faLaptopMedical,
   faMicroscope,
-  faGraduationCap
+  faGraduationCap,
+  faRobot
 );
 
 const navMenu = [
