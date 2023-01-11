@@ -23,7 +23,7 @@
     "global": "^4.4.0",
     "isomorphic-unfetch": "^3.0.0",
     "jwks-rsa": "^1.6.0",
-    "knex": "^0.19.5",
+    "knex": "^2.4.0",
     "morgan": "^1.9.1",
     "next": "^9.0.5",
     "next-images": "^1.2.0",
